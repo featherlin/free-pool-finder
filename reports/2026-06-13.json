@@ -1,25 +1,14 @@
 {
   "date": "2026-06-13",
-  "generated_at": "2026-06-13T12:14:12.535454+08:00",
+  "generated_at": "2026-06-13T12:17:09.899165+08:00",
   "notice": "存活需在路由器面板用中国出口手动验证。本工具只做 GitHub 发现和格式预筛，不做云端 alive/health-check。",
   "summary": {
     "scanned_repos": 80,
     "passed_repos": 17,
-    "new_candidates": 1,
+    "new_candidates": 0,
     "in_use_sources": 7
   },
-  "new_candidates": [
-    {
-      "full_name": "WLget/V2Ray_configs_64",
-      "html_url": "https://github.com/WLget/V2Ray_configs_64",
-      "url": "https://testingcf.jsdelivr.net/gh/WLget/V2Ray_configs_64@master/ConfigSub_list.txt",
-      "format": "base64",
-      "nodes": 22,
-      "stars": 262,
-      "repo_pushed_at": "2026-06-13",
-      "description": "翻墙、免费翻墙、免费科学上网、免费节点、免费梯子、免费ss/v2ray/Clash/trojan节点"
-    }
-  ],
+  "new_candidates": [],
   "in_use": [
     {
       "full_name": "0xRadikal/Free-v2ray-Configs",

@@ -2,16 +2,14 @@
 
 > 存活需在路由器面板用中国出口手动验证。本工具只做 GitHub 发现和格式预筛，不做云端 alive/health-check。
 
-- 生成时间：2026-06-13 12:14:12 CST
+- 生成时间：2026-06-13 12:17:09 CST
 - 搜索后进入仓库扫描：80
 - 通过格式与节点数预筛：17
-- 新增候选仓库：1
+- 新增候选仓库：0
 
 ## 🆕 本周新候选
 
-| 仓库链接 | 订阅URL(jsdelivr) | 格式 | 节点数 | stars | 仓库最近更新 | 简介 |
-| --- | --- | --- | ---: | ---: | --- | --- |
-| [WLget/V2Ray_configs_64](https://github.com/WLget/V2Ray_configs_64) | https://testingcf.jsdelivr.net/gh/WLget/V2Ray_configs_64@master/ConfigSub_list.txt | base64 | 22 | 262 | 2026-06-13 | 翻墙、免费翻墙、免费科学上网、免费节点、免费梯子、免费ss/v2ray/Clash/trojan节点 |
+_本周没有发现超过预筛门槛的新仓库。_
 
 ## 📉 在用源体检
 
