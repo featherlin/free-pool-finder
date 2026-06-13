@@ -339,9 +339,26 @@
         gap: 10px;
       }
 
+      .source-list {
+        display: grid;
+        gap: 10px;
+      }
+
       .candidate-item {
         display: grid;
         grid-template-columns: minmax(260px, 1.1fr) minmax(280px, 0.95fr) minmax(210px, 0.7fr);
+        gap: 14px;
+        align-items: stretch;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--surface);
+        padding: 14px;
+        box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
+      }
+
+      .source-item {
+        display: grid;
+        grid-template-columns: minmax(260px, 0.9fr) minmax(320px, 1.1fr) minmax(240px, 0.8fr);
         gap: 14px;
         align-items: stretch;
         border: 1px solid var(--line);
@@ -527,9 +544,6 @@
       }
 
       th {
-        position: sticky;
-        top: 58px;
-        z-index: 5;
         background: #f8fafc;
         color: #3c4658;
         font-size: 12px;
@@ -636,6 +650,10 @@
         }
 
         .candidate-item {
+          grid-template-columns: 1fr;
+        }
+
+        .source-item {
           grid-template-columns: 1fr;
         }
       }
@@ -774,9 +792,7 @@
             <div class="section-note">只看仓库更新，不代表节点存活</div>
           </div>
         </div>
-        <div class="table-shell">
-          <div class="table-wrap" id="in-use-table"></div>
-        </div>
+        <div class="source-list" id="in-use-list"></div>
       </section>
 
       <section class="section-block" id="rejected">
@@ -940,42 +956,38 @@
 
       function renderInUse(rows) {
         if (!rows || rows.length === 0) {
-          $("in-use-table").innerHTML = '<div class="empty">known_sources.json 里没有 status=in-use 的源。</div>';
+          $("in-use-list").innerHTML = '<div class="empty">known_sources.json 里没有 status=in-use 的源。</div>';
           return;
         }
 
-        const body = rows
+        $("in-use-list").innerHTML = rows
           .map(
             (row) => `
-              <tr>
-                <td><a class="repo" href="${esc(row.html_url)}" target="_blank" rel="noreferrer">${esc(row.full_name)}</a></td>
-                <td><div class="url-box"><div class="url-text">${esc(row.url)}</div>${copyButton(row.url)}</div></td>
-                <td>${formatTag(row.format)}</td>
-                <td class="num">${num(row.stars)}</td>
-                <td>${esc(row.repo_pushed_at)}</td>
-                <td class="num">${row.age_days === null || row.age_days === undefined ? "" : num(row.age_days)}</td>
-                <td><span class="${verdictClass(row.verdict)}">${esc(row.verdict)}</span></td>
-              </tr>
+              <article class="source-item">
+                <div class="candidate-main">
+                  <div class="repo-line">
+                    ${formatTag(row.format)}
+                    <a class="repo" href="${esc(row.html_url)}" target="_blank" rel="noreferrer">${esc(row.full_name)}</a>
+                  </div>
+                  <div class="tag-row">
+                    <span class="pill">stars ${num(row.stars)}</span>
+                    <span class="pill">更新 ${esc(row.repo_pushed_at || "-")}</span>
+                    <span class="pill">距今 ${row.age_days === null || row.age_days === undefined ? "-" : num(row.age_days)} 天</span>
+                  </div>
+                </div>
+                <div>
+                  <div class="url-box">
+                    <div class="url-text">${esc(row.url)}</div>
+                    ${copyButton(row.url)}
+                  </div>
+                </div>
+                <div>
+                  <span class="${verdictClass(row.verdict)}">${esc(row.verdict)}</span>
+                </div>
+              </article>
             `,
           )
           .join("");
-
-        $("in-use-table").innerHTML = `
-          <table>
-            <thead>
-              <tr>
-                <th>在用源</th>
-                <th>订阅 URL</th>
-                <th>格式</th>
-                <th class="num">Stars</th>
-                <th>仓库最近更新</th>
-                <th class="num">距今</th>
-                <th>结论</th>
-              </tr>
-            </thead>
-            <tbody>${body}</tbody>
-          </table>
-        `;
       }
 
       function verdictClass(verdict) {
@@ -1104,7 +1116,7 @@
           renderRejected(latest.rejected);
         } catch (error) {
           $("candidate-list").innerHTML = '<div class="error">还没有可展示的周报。请先在 GitHub Actions 手动运行一次 workflow。</div>';
-          $("in-use-table").innerHTML = '<div class="empty">等待周报生成。</div>';
+          $("in-use-list").innerHTML = '<div class="empty">等待周报生成。</div>';
           renderRejected([]);
         }
 
