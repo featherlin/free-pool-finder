@@ -46,7 +46,6 @@ BASE64_CHARS_RE = re.compile(r"^[A-Za-z0-9+/=_-]+$")
 
 SUB_FILE_RE = re.compile(
     r"""
-    (?ix)
     (^|/)
     (?:
         (?:all[_-]?)?subs?(?:cription)?s?
@@ -68,7 +67,8 @@ SUB_FILE_RE = re.compile(
     )
     [^/]*
     \.(?:txt|yaml|yml)$
-    """
+    """,
+    re.IGNORECASE | re.VERBOSE,
 )
 
 
@@ -483,12 +483,6 @@ def update_known_sources(
             entry = {
                 "status": "candidate",
                 "first_seen": today,
-            }
-            known[full_name] = entry
-            new_candidates.append(candidate)
-
-        entry.update(
-            {
                 "last_seen": today,
                 "url": candidate["url"],
                 "format": candidate["format"],
@@ -500,7 +494,26 @@ def update_known_sources(
                 "repo_updated_at": candidate["updated_at"],
                 "description": candidate["description"],
             }
-        )
+            known[full_name] = entry
+            new_candidates.append(candidate)
+            continue
+
+        entry["last_seen"] = today
+        entry["stars"] = candidate["stars"]
+        entry["repo_pushed_at"] = candidate["pushed_at"]
+        entry["repo_updated_at"] = candidate["updated_at"]
+        entry["description"] = candidate["description"]
+
+        if entry.get("status") == "candidate":
+            entry.update(
+                {
+                    "url": candidate["url"],
+                    "format": candidate["format"],
+                    "nodes": candidate["nodes"],
+                    "branch": candidate["branch"],
+                    "path": candidate["path"],
+                }
+            )
 
     return new_candidates
 
