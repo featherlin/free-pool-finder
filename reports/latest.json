@@ -1,14 +1,453 @@
 {
   "date": "2026-06-13",
-  "generated_at": "2026-06-13T12:17:09.899165+08:00",
+  "generated_at": "2026-06-13T12:47:02.831431+08:00",
   "notice": "存活需在路由器面板用中国出口手动验证。本工具只做 GitHub 发现和格式预筛，不做云端 alive/health-check。",
+  "node_count_note": "节点数为链接计数(粗略,去重前)，仅供排序，实际可用数以路由器面板'存活/总'为准。",
   "summary": {
     "scanned_repos": 80,
     "passed_repos": 17,
-    "new_candidates": 0,
-    "in_use_sources": 7
+    "pending_candidates": 15,
+    "weekly_new_candidates": 15,
+    "new_candidates": 15,
+    "in_use_sources": 7,
+    "rejected_sources": 4
   },
-  "new_candidates": [],
+  "candidates": [
+    {
+      "full_name": "OrionPotter/free-proxy",
+      "html_url": "https://github.com/OrionPotter/free-proxy",
+      "url": "https://testingcf.jsdelivr.net/gh/OrionPotter/free-proxy@main/output/v2ray.txt",
+      "format": "base64",
+      "nodes": 4365,
+      "stars": 6,
+      "repo_pushed_at": "2026-06-13",
+      "description": "Aggregate public proxy subscriptions and generate Clash Meta / V2Ray outputs with basic availability filtering.",
+      "first_seen": "2026-06-13",
+      "last_seen": "2026-06-13",
+      "risk_hints": [
+        "⚠低星(信任低,可能SEO垃圾仓库)",
+        "⚠超大池(探测负载高,留意)"
+      ]
+    },
+    {
+      "full_name": "Alirewa/V2ray-Configs",
+      "html_url": "https://github.com/Alirewa/V2ray-Configs",
+      "url": "https://testingcf.jsdelivr.net/gh/Alirewa/V2ray-Configs@main/config.txt",
+      "format": "plain",
+      "nodes": 2000,
+      "stars": 2,
+      "repo_pushed_at": "2026-06-13",
+      "description": "Free V2Ray / Xray subscription link — 1000+ configs auto-collected every 15 min from 180+ Telegram channels and GitHub sources. No login, no ads.",
+      "first_seen": "2026-06-13",
+      "last_seen": "2026-06-13",
+      "risk_hints": [
+        "⚠低星(信任低,可能SEO垃圾仓库)"
+      ]
+    },
+    {
+      "full_name": "MahanKenway/Freedom-V2Ray",
+      "html_url": "https://github.com/MahanKenway/Freedom-V2Ray",
+      "url": "https://testingcf.jsdelivr.net/gh/MahanKenway/Freedom-V2Ray@main/configs/vmess.txt",
+      "format": "plain",
+      "nodes": 1015,
+      "stars": 72,
+      "repo_pushed_at": "2026-06-13",
+      "description": "V2Ray Collector | Auto-Update every 2 hours |VLESS, VMESS, Trojan & Reality configs. 🕊️ For a Free Iran - برای آزادی ایران",
+      "first_seen": "2026-06-13",
+      "last_seen": "2026-06-13",
+      "risk_hints": [
+        "🇮🇷伊朗源(地理错配,中国出口大概率连不上)"
+      ]
+    },
+    {
+      "full_name": "peacefish/nodefree",
+      "html_url": "https://github.com/peacefish/nodefree",
+      "url": "https://testingcf.jsdelivr.net/gh/peacefish/nodefree@main/sub/sub_merge_base64.txt",
+      "format": "base64",
+      "nodes": 979,
+      "stars": 31,
+      "repo_pushed_at": "2026-06-13",
+      "description": "nodefree",
+      "first_seen": "2026-06-13",
+      "last_seen": "2026-06-13",
+      "risk_hints": []
+    },
+    {
+      "full_name": "worldmarketing02-design/proxy-master-list",
+      "html_url": "https://github.com/worldmarketing02-design/proxy-master-list",
+      "url": "https://testingcf.jsdelivr.net/gh/worldmarketing02-design/proxy-master-list@main/sub.txt",
+      "format": "base64",
+      "nodes": 706,
+      "stars": 1,
+      "repo_pushed_at": "2026-06-13",
+      "description": "auto scrape free vpn subscription list for the secure browser",
+      "first_seen": "2026-06-13",
+      "last_seen": "2026-06-13",
+      "risk_hints": [
+        "⚠低星(信任低,可能SEO垃圾仓库)"
+      ]
+    },
+    {
+      "full_name": "dgshsh031-code/free-vpn-sub",
+      "html_url": "https://github.com/dgshsh031-code/free-vpn-sub",
+      "url": "https://testingcf.jsdelivr.net/gh/dgshsh031-code/free-vpn-sub@main/sub.txt",
+      "format": "plain",
+      "nodes": 387,
+      "stars": 0,
+      "repo_pushed_at": "2026-06-13",
+      "description": "Free VPN subscription - auto-updated",
+      "first_seen": "2026-06-13",
+      "last_seen": "2026-06-13",
+      "risk_hints": [
+        "⚠低星(信任低,可能SEO垃圾仓库)"
+      ]
+    },
+    {
+      "full_name": "niq0n0pin/v2rayfree-nice-tracker",
+      "html_url": "https://github.com/niq0n0pin/v2rayfree-nice-tracker",
+      "url": "https://testingcf.jsdelivr.net/gh/niq0n0pin/v2rayfree-nice-tracker@main/backup/nodes.txt",
+      "format": "plain",
+      "nodes": 246,
+      "stars": 3,
+      "repo_pushed_at": "2026-06-13",
+      "description": "免费节点+tracker",
+      "first_seen": "2026-06-13",
+      "last_seen": "2026-06-13",
+      "risk_hints": [
+        "⚠低星(信任低,可能SEO垃圾仓库)"
+      ]
+    },
+    {
+      "full_name": "miladtahanian/V2RayCFGTesterPro",
+      "html_url": "https://github.com/miladtahanian/V2RayCFGTesterPro",
+      "url": "https://testingcf.jsdelivr.net/gh/miladtahanian/V2RayCFGTesterPro@main/subscriptions/subscription.txt",
+      "format": "base64",
+      "nodes": 200,
+      "stars": 19,
+      "repo_pushed_at": "2026-06-13",
+      "description": "این یک ابزار پیشرفته برای تست تنظیمات V2Ray/Xray است که هم رابط گرافیکی (GUI) و هم خط فرمان (CLI) دارد، تا بتوان تنظیمات پراکسی را پیدا، ارزیابی و مدیریت کرد. این ابزار برای دسترسی آسان به تنظیمات و راحتی در کپی و پیست طراحی شده است.",
+      "first_seen": "2026-06-13",
+      "last_seen": "2026-06-13",
+      "risk_hints": []
+    },
+    {
+      "full_name": "kooker/FreeSubsCheck",
+      "html_url": "https://github.com/kooker/FreeSubsCheck",
+      "url": "https://testingcf.jsdelivr.net/gh/kooker/FreeSubsCheck@main/base64.txt",
+      "format": "base64",
+      "nodes": 45,
+      "stars": 47,
+      "repo_pushed_at": "2026-06-13",
+      "description": "免费节点、免费订阅 FreeSubs FreeNodes 利用 subs-check 自动从节点池爬取分享，支持 v2ray clash 等各种代理软件，部分需自行转换。",
+      "first_seen": "2026-06-13",
+      "last_seen": "2026-06-13",
+      "risk_hints": []
+    },
+    {
+      "full_name": "v2raynnodes/clashfree",
+      "html_url": "https://github.com/v2raynnodes/clashfree",
+      "url": "https://testingcf.jsdelivr.net/gh/v2raynnodes/clashfree@main/nodes/nodefree.txt",
+      "format": "plain",
+      "nodes": 30,
+      "stars": 8,
+      "repo_pushed_at": "2026-06-13",
+      "description": "clash节点、免费clash节点、免费梯子、clash科学上网、clash翻墙、clash订阅链接、翻墙-科学上网、自由上网、免费科学上网、免费翻墙、fanqiang、免费节点、免费梯子、免费ss/v2ray/trojan节点",
+      "first_seen": "2026-06-13",
+      "last_seen": "2026-06-13",
+      "risk_hints": [
+        "⚠低星(信任低,可能SEO垃圾仓库)"
+      ]
+    },
+    {
+      "full_name": "Barabama/FreeNodes",
+      "html_url": "https://github.com/Barabama/FreeNodes",
+      "url": "https://testingcf.jsdelivr.net/gh/Barabama/FreeNodes@main/nodes/nodefree.txt",
+      "format": "plain",
+      "nodes": 23,
+      "stars": 2833,
+      "repo_pushed_at": "2026-06-12",
+      "description": "v2ray、clash免费节点爬虫，自动更新",
+      "first_seen": "2026-06-13",
+      "last_seen": "2026-06-13",
+      "risk_hints": []
+    },
+    {
+      "full_name": "WLget/V2Ray_configs_64",
+      "html_url": "https://github.com/WLget/V2Ray_configs_64",
+      "url": "https://testingcf.jsdelivr.net/gh/WLget/V2Ray_configs_64@master/ConfigSub_list.txt",
+      "format": "base64",
+      "nodes": 22,
+      "stars": 262,
+      "repo_pushed_at": "2026-06-13",
+      "description": "翻墙、免费翻墙、免费科学上网、免费节点、免费梯子、免费ss/v2ray/Clash/trojan节点",
+      "first_seen": "2026-06-13",
+      "last_seen": "2026-06-13",
+      "risk_hints": []
+    },
+    {
+      "full_name": "SnapdragonLee/SystemProxy",
+      "html_url": "https://github.com/SnapdragonLee/SystemProxy",
+      "url": "https://testingcf.jsdelivr.net/gh/SnapdragonLee/SystemProxy@master/dist/clash_config_extra.yaml",
+      "format": "clash",
+      "nodes": 268,
+      "stars": 120,
+      "repo_pushed_at": "2026-06-13",
+      "description": "Free Clash subscription",
+      "first_seen": "2026-06-13",
+      "last_seen": "2026-06-13",
+      "risk_hints": [
+        "⚠clash(防多配置拼接解析崩,优先找该仓库的 base64/txt 版)"
+      ]
+    },
+    {
+      "full_name": "awesome-vpn/awesome-vpn",
+      "html_url": "https://github.com/awesome-vpn/awesome-vpn",
+      "url": "https://testingcf.jsdelivr.net/gh/awesome-vpn/awesome-vpn@master/clash.yaml",
+      "format": "clash",
+      "nodes": 120,
+      "stars": 5568,
+      "repo_pushed_at": "2026-06-13",
+      "description": "Free proxy node aggregator. Daily updated vmess/vless/trojan/ss. 免费 代理节点 翻墙 梯子 科学上网 机场订阅 网络加速 VPN 免翻墙每日更新 一键导入",
+      "first_seen": "2026-06-13",
+      "last_seen": "2026-06-13",
+      "risk_hints": [
+        "⚠clash(防多配置拼接解析崩,优先找该仓库的 base64/txt 版)"
+      ]
+    },
+    {
+      "full_name": "snakem982/proxypool",
+      "html_url": "https://github.com/snakem982/proxypool",
+      "url": "https://testingcf.jsdelivr.net/gh/snakem982/proxypool@main/source/clash-meta-2.yaml",
+      "format": "clash",
+      "nodes": 22,
+      "stars": 1839,
+      "repo_pushed_at": "2026-06-13",
+      "description": "Free Proxies，Free Nodes，免费节点，白嫖节点，免费vpn，免费v2ray，免费订阅，免费clash，Free VPN，Free v2ray，Free Sub，Free Clash",
+      "first_seen": "2026-06-13",
+      "last_seen": "2026-06-13",
+      "risk_hints": [
+        "⚠clash(防多配置拼接解析崩,优先找该仓库的 base64/txt 版)"
+      ]
+    }
+  ],
+  "new_candidates": [
+    {
+      "full_name": "OrionPotter/free-proxy",
+      "html_url": "https://github.com/OrionPotter/free-proxy",
+      "url": "https://testingcf.jsdelivr.net/gh/OrionPotter/free-proxy@main/output/v2ray.txt",
+      "format": "base64",
+      "nodes": 4365,
+      "stars": 6,
+      "repo_pushed_at": "2026-06-13",
+      "description": "Aggregate public proxy subscriptions and generate Clash Meta / V2Ray outputs with basic availability filtering.",
+      "first_seen": "2026-06-13",
+      "last_seen": "2026-06-13",
+      "risk_hints": [
+        "⚠低星(信任低,可能SEO垃圾仓库)",
+        "⚠超大池(探测负载高,留意)"
+      ]
+    },
+    {
+      "full_name": "Alirewa/V2ray-Configs",
+      "html_url": "https://github.com/Alirewa/V2ray-Configs",
+      "url": "https://testingcf.jsdelivr.net/gh/Alirewa/V2ray-Configs@main/config.txt",
+      "format": "plain",
+      "nodes": 2000,
+      "stars": 2,
+      "repo_pushed_at": "2026-06-13",
+      "description": "Free V2Ray / Xray subscription link — 1000+ configs auto-collected every 15 min from 180+ Telegram channels and GitHub sources. No login, no ads.",
+      "first_seen": "2026-06-13",
+      "last_seen": "2026-06-13",
+      "risk_hints": [
+        "⚠低星(信任低,可能SEO垃圾仓库)"
+      ]
+    },
+    {
+      "full_name": "MahanKenway/Freedom-V2Ray",
+      "html_url": "https://github.com/MahanKenway/Freedom-V2Ray",
+      "url": "https://testingcf.jsdelivr.net/gh/MahanKenway/Freedom-V2Ray@main/configs/vmess.txt",
+      "format": "plain",
+      "nodes": 1015,
+      "stars": 72,
+      "repo_pushed_at": "2026-06-13",
+      "description": "V2Ray Collector | Auto-Update every 2 hours |VLESS, VMESS, Trojan & Reality configs. 🕊️ For a Free Iran - برای آزادی ایران",
+      "first_seen": "2026-06-13",
+      "last_seen": "2026-06-13",
+      "risk_hints": [
+        "🇮🇷伊朗源(地理错配,中国出口大概率连不上)"
+      ]
+    },
+    {
+      "full_name": "peacefish/nodefree",
+      "html_url": "https://github.com/peacefish/nodefree",
+      "url": "https://testingcf.jsdelivr.net/gh/peacefish/nodefree@main/sub/sub_merge_base64.txt",
+      "format": "base64",
+      "nodes": 979,
+      "stars": 31,
+      "repo_pushed_at": "2026-06-13",
+      "description": "nodefree",
+      "first_seen": "2026-06-13",
+      "last_seen": "2026-06-13",
+      "risk_hints": []
+    },
+    {
+      "full_name": "worldmarketing02-design/proxy-master-list",
+      "html_url": "https://github.com/worldmarketing02-design/proxy-master-list",
+      "url": "https://testingcf.jsdelivr.net/gh/worldmarketing02-design/proxy-master-list@main/sub.txt",
+      "format": "base64",
+      "nodes": 706,
+      "stars": 1,
+      "repo_pushed_at": "2026-06-13",
+      "description": "auto scrape free vpn subscription list for the secure browser",
+      "first_seen": "2026-06-13",
+      "last_seen": "2026-06-13",
+      "risk_hints": [
+        "⚠低星(信任低,可能SEO垃圾仓库)"
+      ]
+    },
+    {
+      "full_name": "dgshsh031-code/free-vpn-sub",
+      "html_url": "https://github.com/dgshsh031-code/free-vpn-sub",
+      "url": "https://testingcf.jsdelivr.net/gh/dgshsh031-code/free-vpn-sub@main/sub.txt",
+      "format": "plain",
+      "nodes": 387,
+      "stars": 0,
+      "repo_pushed_at": "2026-06-13",
+      "description": "Free VPN subscription - auto-updated",
+      "first_seen": "2026-06-13",
+      "last_seen": "2026-06-13",
+      "risk_hints": [
+        "⚠低星(信任低,可能SEO垃圾仓库)"
+      ]
+    },
+    {
+      "full_name": "niq0n0pin/v2rayfree-nice-tracker",
+      "html_url": "https://github.com/niq0n0pin/v2rayfree-nice-tracker",
+      "url": "https://testingcf.jsdelivr.net/gh/niq0n0pin/v2rayfree-nice-tracker@main/backup/nodes.txt",
+      "format": "plain",
+      "nodes": 246,
+      "stars": 3,
+      "repo_pushed_at": "2026-06-13",
+      "description": "免费节点+tracker",
+      "first_seen": "2026-06-13",
+      "last_seen": "2026-06-13",
+      "risk_hints": [
+        "⚠低星(信任低,可能SEO垃圾仓库)"
+      ]
+    },
+    {
+      "full_name": "miladtahanian/V2RayCFGTesterPro",
+      "html_url": "https://github.com/miladtahanian/V2RayCFGTesterPro",
+      "url": "https://testingcf.jsdelivr.net/gh/miladtahanian/V2RayCFGTesterPro@main/subscriptions/subscription.txt",
+      "format": "base64",
+      "nodes": 200,
+      "stars": 19,
+      "repo_pushed_at": "2026-06-13",
+      "description": "این یک ابزار پیشرفته برای تست تنظیمات V2Ray/Xray است که هم رابط گرافیکی (GUI) و هم خط فرمان (CLI) دارد، تا بتوان تنظیمات پراکسی را پیدا، ارزیابی و مدیریت کرد. این ابزار برای دسترسی آسان به تنظیمات و راحتی در کپی و پیست طراحی شده است.",
+      "first_seen": "2026-06-13",
+      "last_seen": "2026-06-13",
+      "risk_hints": []
+    },
+    {
+      "full_name": "kooker/FreeSubsCheck",
+      "html_url": "https://github.com/kooker/FreeSubsCheck",
+      "url": "https://testingcf.jsdelivr.net/gh/kooker/FreeSubsCheck@main/base64.txt",
+      "format": "base64",
+      "nodes": 45,
+      "stars": 47,
+      "repo_pushed_at": "2026-06-13",
+      "description": "免费节点、免费订阅 FreeSubs FreeNodes 利用 subs-check 自动从节点池爬取分享，支持 v2ray clash 等各种代理软件，部分需自行转换。",
+      "first_seen": "2026-06-13",
+      "last_seen": "2026-06-13",
+      "risk_hints": []
+    },
+    {
+      "full_name": "v2raynnodes/clashfree",
+      "html_url": "https://github.com/v2raynnodes/clashfree",
+      "url": "https://testingcf.jsdelivr.net/gh/v2raynnodes/clashfree@main/nodes/nodefree.txt",
+      "format": "plain",
+      "nodes": 30,
+      "stars": 8,
+      "repo_pushed_at": "2026-06-13",
+      "description": "clash节点、免费clash节点、免费梯子、clash科学上网、clash翻墙、clash订阅链接、翻墙-科学上网、自由上网、免费科学上网、免费翻墙、fanqiang、免费节点、免费梯子、免费ss/v2ray/trojan节点",
+      "first_seen": "2026-06-13",
+      "last_seen": "2026-06-13",
+      "risk_hints": [
+        "⚠低星(信任低,可能SEO垃圾仓库)"
+      ]
+    },
+    {
+      "full_name": "Barabama/FreeNodes",
+      "html_url": "https://github.com/Barabama/FreeNodes",
+      "url": "https://testingcf.jsdelivr.net/gh/Barabama/FreeNodes@main/nodes/nodefree.txt",
+      "format": "plain",
+      "nodes": 23,
+      "stars": 2833,
+      "repo_pushed_at": "2026-06-12",
+      "description": "v2ray、clash免费节点爬虫，自动更新",
+      "first_seen": "2026-06-13",
+      "last_seen": "2026-06-13",
+      "risk_hints": []
+    },
+    {
+      "full_name": "WLget/V2Ray_configs_64",
+      "html_url": "https://github.com/WLget/V2Ray_configs_64",
+      "url": "https://testingcf.jsdelivr.net/gh/WLget/V2Ray_configs_64@master/ConfigSub_list.txt",
+      "format": "base64",
+      "nodes": 22,
+      "stars": 262,
+      "repo_pushed_at": "2026-06-13",
+      "description": "翻墙、免费翻墙、免费科学上网、免费节点、免费梯子、免费ss/v2ray/Clash/trojan节点",
+      "first_seen": "2026-06-13",
+      "last_seen": "2026-06-13",
+      "risk_hints": []
+    },
+    {
+      "full_name": "SnapdragonLee/SystemProxy",
+      "html_url": "https://github.com/SnapdragonLee/SystemProxy",
+      "url": "https://testingcf.jsdelivr.net/gh/SnapdragonLee/SystemProxy@master/dist/clash_config_extra.yaml",
+      "format": "clash",
+      "nodes": 268,
+      "stars": 120,
+      "repo_pushed_at": "2026-06-13",
+      "description": "Free Clash subscription",
+      "first_seen": "2026-06-13",
+      "last_seen": "2026-06-13",
+      "risk_hints": [
+        "⚠clash(防多配置拼接解析崩,优先找该仓库的 base64/txt 版)"
+      ]
+    },
+    {
+      "full_name": "awesome-vpn/awesome-vpn",
+      "html_url": "https://github.com/awesome-vpn/awesome-vpn",
+      "url": "https://testingcf.jsdelivr.net/gh/awesome-vpn/awesome-vpn@master/clash.yaml",
+      "format": "clash",
+      "nodes": 120,
+      "stars": 5568,
+      "repo_pushed_at": "2026-06-13",
+      "description": "Free proxy node aggregator. Daily updated vmess/vless/trojan/ss. 免费 代理节点 翻墙 梯子 科学上网 机场订阅 网络加速 VPN 免翻墙每日更新 一键导入",
+      "first_seen": "2026-06-13",
+      "last_seen": "2026-06-13",
+      "risk_hints": [
+        "⚠clash(防多配置拼接解析崩,优先找该仓库的 base64/txt 版)"
+      ]
+    },
+    {
+      "full_name": "snakem982/proxypool",
+      "html_url": "https://github.com/snakem982/proxypool",
+      "url": "https://testingcf.jsdelivr.net/gh/snakem982/proxypool@main/source/clash-meta-2.yaml",
+      "format": "clash",
+      "nodes": 22,
+      "stars": 1839,
+      "repo_pushed_at": "2026-06-13",
+      "description": "Free Proxies，Free Nodes，免费节点，白嫖节点，免费vpn，免费v2ray，免费订阅，免费clash，Free VPN，Free v2ray，Free Sub，Free Clash",
+      "first_seen": "2026-06-13",
+      "last_seen": "2026-06-13",
+      "risk_hints": [
+        "⚠clash(防多配置拼接解析崩,优先找该仓库的 base64/txt 版)"
+      ]
+    }
+  ],
   "in_use": [
     {
       "full_name": "0xRadikal/Free-v2ray-Configs",
@@ -45,7 +484,7 @@
       "html_url": "https://github.com/igareck/vpn-configs-for-russia",
       "url": "https://testingcf.jsdelivr.net/gh/igareck/vpn-configs-for-russia@main/BLACK_VLESS_RUS_mobile.txt",
       "format": "plain",
-      "stars": 6819,
+      "stars": 6824,
       "repo_pushed_at": "2026-06-13",
       "age_days": 0,
       "verdict": "近期有更新"
@@ -79,6 +518,36 @@
       "repo_pushed_at": "2026-06-13",
       "age_days": 0,
       "verdict": "近期有更新"
+    }
+  ],
+  "rejected": [
+    {
+      "full_name": "ALIILAPRO/v2rayNG-Config",
+      "html_url": "https://github.com/ALIILAPRO/v2rayNG-Config",
+      "note": "性价比差0~1/83",
+      "first_seen": "2026-06-13",
+      "last_seen": "2026-06-13"
+    },
+    {
+      "full_name": "liketolivefree/kobabi",
+      "html_url": "https://github.com/liketolivefree/kobabi",
+      "note": "0/228全死",
+      "first_seen": "2026-06-13",
+      "last_seen": "2026-06-13"
+    },
+    {
+      "full_name": "MatinGhanbari/v2ray-configs",
+      "html_url": "https://github.com/MatinGhanbari/v2ray-configs",
+      "note": "伊朗源中国出口0/198不自愈",
+      "first_seen": "2026-06-13",
+      "last_seen": "2026-06-13"
+    },
+    {
+      "full_name": "xiaoji235/airport-free",
+      "html_url": "https://github.com/xiaoji235/airport-free",
+      "note": "性价比差2/777，clash版多配置拼接解析崩",
+      "first_seen": "2026-06-13",
+      "last_seen": "2026-06-13"
     }
   ]
 }

@@ -334,6 +334,26 @@
         color: var(--amber);
       }
 
+      .risk-list {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        min-width: 210px;
+      }
+
+      .risk-chip {
+        display: inline-flex;
+        width: fit-content;
+        max-width: 100%;
+        border-radius: 6px;
+        background: #fff7ed;
+        border: 1px solid #fed7aa;
+        color: #9a3412;
+        padding: 4px 6px;
+        font-size: 12px;
+        line-height: 1.35;
+      }
+
       .verdict {
         color: var(--teal);
         font-weight: 700;
@@ -362,6 +382,27 @@
         grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
         gap: 10px;
         padding: 18px 20px 22px;
+      }
+
+      .table-note {
+        margin: 0;
+        padding: 12px 20px;
+        border-bottom: 1px solid var(--line);
+        color: var(--muted);
+        background: #fbfcff;
+        font-size: 13px;
+      }
+
+      .reject-details {
+        padding: 0;
+      }
+
+      .reject-details summary {
+        cursor: pointer;
+        padding: 16px 20px;
+        color: var(--muted);
+        font-size: 14px;
+        border-bottom: 1px solid var(--line);
       }
 
       .archive-link {
@@ -440,8 +481,9 @@
           <div class="brand-text">free-pool-finder</div>
         </div>
         <nav class="nav" aria-label="页面导航">
-          <a href="#new">新候选</a>
+          <a href="#candidates">待验证</a>
           <a href="#in-use">在用源</a>
+          <a href="#rejected">已拒源</a>
           <a href="#archive">归档</a>
         </nav>
       </div>
@@ -469,29 +511,32 @@
 
       <section class="metrics" aria-label="摘要指标">
         <div class="metric">
-          <div class="metric-value" id="metric-scanned">-</div>
-          <div class="metric-label">扫描仓库</div>
+          <div class="metric-value" id="metric-pending">-</div>
+          <div class="metric-label">待验证候选</div>
         </div>
         <div class="metric">
-          <div class="metric-value" id="metric-passed">-</div>
-          <div class="metric-label">通过预筛</div>
-        </div>
-        <div class="metric">
-          <div class="metric-value" id="metric-new">-</div>
-          <div class="metric-label">本周新候选</div>
+          <div class="metric-value" id="metric-weekly-new">-</div>
+          <div class="metric-label">本周新增</div>
         </div>
         <div class="metric">
           <div class="metric-value" id="metric-in-use">-</div>
-          <div class="metric-label">在用源</div>
+          <div class="metric-label">在用</div>
+        </div>
+        <div class="metric">
+          <div class="metric-value" id="metric-rejected">-</div>
+          <div class="metric-label">已拒</div>
         </div>
       </section>
 
-      <section class="panel" id="new">
+      <section class="panel" id="candidates">
         <div class="panel-head">
-          <h2>本周新候选</h2>
-          <div class="panel-note">按格式优先级和节点数排序</div>
+          <h2>待验证候选</h2>
+          <div class="panel-note" id="candidate-subnote">按格式优先级和节点数排序</div>
         </div>
-        <div class="table-wrap" id="new-table"></div>
+        <p class="table-note" id="node-count-note">
+          节点数为链接计数(粗略,去重前)，仅供排序，实际可用数以路由器面板“存活/总”为准。
+        </p>
+        <div class="table-wrap" id="candidate-table"></div>
       </section>
 
       <section class="panel" id="in-use">
@@ -500,6 +545,17 @@
           <div class="panel-note">只看仓库更新，不代表节点存活</div>
         </div>
         <div class="table-wrap" id="in-use-table"></div>
+      </section>
+
+      <section class="panel" id="rejected">
+        <div class="panel-head">
+          <h2>已拒源</h2>
+          <div class="panel-note">保留历史原因，避免重复验证</div>
+        </div>
+        <details class="reject-details">
+          <summary id="rejected-summary">展开查看 rejected 源</summary>
+          <div class="table-wrap" id="rejected-table"></div>
+        </details>
       </section>
 
       <section class="panel" id="archive">
@@ -565,9 +621,14 @@
         return `<div class="url-cell"><span class="url-text">${esc(url)}</span>${copyButton(url)}</div>`;
       }
 
-      function renderNewCandidates(rows) {
+      function renderRisks(hints) {
+        if (!hints || hints.length === 0) return "";
+        return `<div class="risk-list">${hints.map((hint) => `<span class="risk-chip">${esc(hint)}</span>`).join("")}</div>`;
+      }
+
+      function renderCandidates(rows) {
         if (!rows || rows.length === 0) {
-          $("new-table").innerHTML = '<div class="empty">本周没有发现超过预筛门槛的新仓库。</div>';
+          $("candidate-table").innerHTML = '<div class="empty">当前没有 status=candidate 的待验证候选。</div>';
           return;
         }
 
@@ -581,22 +642,24 @@
                 <td class="num">${num(row.nodes)}</td>
                 <td class="num">${num(row.stars)}</td>
                 <td>${esc(row.repo_pushed_at)}</td>
+                <td>${renderRisks(row.risk_hints)}</td>
                 <td>${esc(row.description)}</td>
               </tr>
             `,
           )
           .join("");
 
-        $("new-table").innerHTML = `
+        $("candidate-table").innerHTML = `
           <table>
             <thead>
               <tr>
                 <th>仓库</th>
                 <th>订阅 URL</th>
                 <th>格式</th>
-                <th class="num">节点数</th>
+                <th class="num">节点数(粗略)</th>
                 <th class="num">Stars</th>
                 <th>最近更新</th>
+                <th>风险/提示</th>
                 <th>简介</th>
               </tr>
             </thead>
@@ -652,6 +715,41 @@
         `;
       }
 
+      function renderRejected(rows) {
+        $("rejected-summary").textContent = `展开查看 ${rows ? rows.length : 0} 个 rejected 源`;
+        if (!rows || rows.length === 0) {
+          $("rejected-table").innerHTML = '<div class="empty">known_sources.json 里没有 status=rejected 的源。</div>';
+          return;
+        }
+
+        const body = rows
+          .map(
+            (row) => `
+              <tr>
+                <td><a class="repo" href="${esc(row.html_url)}" target="_blank" rel="noreferrer">${esc(row.full_name)}</a></td>
+                <td>${esc(row.note)}</td>
+                <td>${esc(row.first_seen)}</td>
+                <td>${esc(row.last_seen)}</td>
+              </tr>
+            `,
+          )
+          .join("");
+
+        $("rejected-table").innerHTML = `
+          <table>
+            <thead>
+              <tr>
+                <th>已拒源</th>
+                <th>Note</th>
+                <th>first_seen</th>
+                <th>last_seen</th>
+              </tr>
+            </thead>
+            <tbody>${body}</tbody>
+          </table>
+        `;
+      }
+
       function renderArchive(rows) {
         if (!rows || rows.length === 0) {
           $("archive-list").innerHTML = '<div class="empty">等待首次周报生成。</div>';
@@ -676,18 +774,23 @@
           $("report-date").textContent = `报告日期：${latest.date || "-"}`;
           $("generated-at").textContent = `生成时间：${formatDateTime(latest.generated_at) || "-"}`;
           $("notice").textContent = latest.notice || $("notice").textContent;
+          $("node-count-note").textContent = latest.node_count_note || $("node-count-note").textContent;
 
           const summary = latest.summary || {};
-          $("metric-scanned").textContent = num(summary.scanned_repos);
-          $("metric-passed").textContent = num(summary.passed_repos);
-          $("metric-new").textContent = num(summary.new_candidates);
+          $("metric-pending").textContent = num(summary.pending_candidates);
+          $("metric-weekly-new").textContent = num(summary.weekly_new_candidates ?? summary.new_candidates);
           $("metric-in-use").textContent = num(summary.in_use_sources);
+          $("metric-rejected").textContent = num(summary.rejected_sources);
+          $("candidate-subnote").textContent =
+            `本周新增 ${num(summary.weekly_new_candidates ?? summary.new_candidates)} 个；按格式优先级和节点数排序`;
 
-          renderNewCandidates(latest.new_candidates);
+          renderCandidates(latest.candidates || latest.new_candidates);
           renderInUse(latest.in_use);
+          renderRejected(latest.rejected);
         } catch (error) {
-          $("new-table").innerHTML = '<div class="error">还没有可展示的周报。请先在 GitHub Actions 手动运行一次 workflow。</div>';
+          $("candidate-table").innerHTML = '<div class="error">还没有可展示的周报。请先在 GitHub Actions 手动运行一次 workflow。</div>';
           $("in-use-table").innerHTML = '<div class="empty">等待周报生成。</div>';
+          renderRejected([]);
         }
 
         try {

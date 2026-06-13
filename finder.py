@@ -43,6 +43,7 @@ CLASH_NODE_RE = re.compile(r"(?m)^\s*-\s*name\s*:")
 OUTBOUNDS_RE = re.compile(r"\boutbounds\b", re.IGNORECASE)
 HTTP_SOCKS_RE = re.compile(r"(?m)^(?:https?|socks5?)://\d", re.IGNORECASE)
 BASE64_CHARS_RE = re.compile(r"^[A-Za-z0-9+/=_-]+$")
+IRAN_SOURCE_RE = re.compile(r"(ایران|برای آزادی|آزادی|iran|iranian)", re.IGNORECASE)
 
 SUB_FILE_RE = re.compile(
     r"""
@@ -553,23 +554,54 @@ def candidate_sort_key(candidate: dict[str, Any]) -> tuple[int, int]:
     return (FORMAT_PRIORITY.get(candidate.get("format"), 0), int(candidate.get("nodes") or 0))
 
 
-def render_new_candidates_table(candidates: list[dict[str, Any]]) -> str:
+def risk_hints(item: dict[str, Any]) -> list[str]:
+    hints: list[str] = []
+    description = str(item.get("description") or "")
+    if IRAN_SOURCE_RE.search(description):
+        hints.append("🇮🇷伊朗源(地理错配,中国出口大概率连不上)")
+    if item.get("format") == "clash":
+        hints.append("⚠clash(防多配置拼接解析崩,优先找该仓库的 base64/txt 版)")
+    if int(item.get("stars") or 0) < 10:
+        hints.append("⚠低星(信任低,可能SEO垃圾仓库)")
+    if int(item.get("nodes") or 0) > 2000:
+        hints.append("⚠超大池(探测负载高,留意)")
+    return hints
+
+
+def known_status_rows(known: dict[str, dict[str, Any]], status: str) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    for full_name, entry in known.items():
+        if entry.get("status") != status:
+            continue
+        rows.append(
+            {
+                "full_name": full_name,
+                "html_url": f"https://github.com/{full_name}",
+                **entry,
+            }
+        )
+    return rows
+
+
+def render_candidate_table(candidates: list[dict[str, Any]]) -> str:
     if not candidates:
-        return "_本周没有发现超过预筛门槛的新仓库。_"
+        return "_当前没有 status=candidate 的待验证候选。_"
 
     lines = [
-        "| 仓库链接 | 订阅URL(jsdelivr) | 格式 | 节点数 | stars | 仓库最近更新 | 简介 |",
-        "| --- | --- | --- | ---: | ---: | --- | --- |",
+        "| 仓库链接 | 订阅URL(jsdelivr) | 格式 | 节点数(粗略) | stars | 仓库最近更新 | 风险/提示 | 简介 |",
+        "| --- | --- | --- | ---: | ---: | --- | --- | --- |",
     ]
     for item in sorted(candidates, key=candidate_sort_key, reverse=True):
-        repo_link = f"[{md_escape(item['full_name'])}]({item['html_url']})"
-        sub_url = md_escape(item["url"])
-        fmt = md_escape(item["format"])
+        full_name = item["full_name"]
+        repo_link = f"[{md_escape(full_name)}]({item.get('html_url') or f'https://github.com/{full_name}'})"
+        sub_url = md_escape(item.get("url", ""))
+        fmt = md_escape(item.get("format", ""))
         nodes = int(item.get("nodes") or 0)
         stars = int(item.get("stars") or 0)
-        pushed = md_escape(iso_date(parse_github_dt(item.get("pushed_at"))))
+        pushed = md_escape(iso_date(parse_github_dt(item.get("repo_pushed_at") or item.get("pushed_at"))))
+        risks = md_escape("；".join(risk_hints(item)))
         desc = md_escape(item.get("description"), max_len=90)
-        lines.append(f"| {repo_link} | {sub_url} | {fmt} | {nodes} | {stars} | {pushed} | {desc} |")
+        lines.append(f"| {repo_link} | {sub_url} | {fmt} | {nodes} | {stars} | {pushed} | {risks} | {desc} |")
     return "\n".join(lines)
 
 
@@ -603,24 +635,46 @@ def render_in_use_table(rows: list[dict[str, Any]], now: datetime) -> str:
     return "\n".join(lines)
 
 
+def render_rejected_table(rows: list[dict[str, Any]]) -> str:
+    if not rows:
+        return "_known_sources.json 里没有 status=rejected 的源。_"
+
+    lines = [
+        "| 已拒源 | note | first_seen | last_seen |",
+        "| --- | --- | --- | --- |",
+    ]
+    for row in sorted(rows, key=lambda item: item["full_name"].lower()):
+        full_name = row["full_name"]
+        repo_link = f"[{md_escape(full_name)}]({row.get('html_url') or f'https://github.com/{full_name}'})"
+        note = md_escape(row.get("note", ""))
+        first_seen = md_escape(row.get("first_seen", ""))
+        last_seen = md_escape(row.get("last_seen", ""))
+        lines.append(f"| {repo_link} | {note} | {first_seen} | {last_seen} |")
+    return "\n".join(lines)
+
+
 def build_report_payload(
     report_date: str,
     now: datetime,
-    new_candidates: list[dict[str, Any]],
+    candidates: list[dict[str, Any]],
     in_use_rows: list[dict[str, Any]],
+    rejected_rows: list[dict[str, Any]],
     total_repos: int,
     total_passed: int,
 ) -> dict[str, Any]:
     def candidate_payload(item: dict[str, Any]) -> dict[str, Any]:
         return {
             "full_name": item.get("full_name", ""),
-            "html_url": item.get("html_url", ""),
+            "html_url": item.get("html_url") or f"https://github.com/{item.get('full_name', '')}",
             "url": item.get("url", ""),
             "format": item.get("format", ""),
             "nodes": int(item.get("nodes") or 0),
             "stars": int(item.get("stars") or 0),
-            "repo_pushed_at": iso_date(parse_github_dt(item.get("pushed_at"))),
+            "repo_pushed_at": iso_date(parse_github_dt(item.get("repo_pushed_at") or item.get("pushed_at"))),
             "description": item.get("description", ""),
+            "first_seen": item.get("first_seen", ""),
+            "last_seen": item.get("last_seen", ""),
+            "risk_hints": risk_hints(item),
         }
 
     def in_use_payload(row: dict[str, Any]) -> dict[str, Any]:
@@ -647,21 +701,46 @@ def build_report_payload(
             "verdict": verdict,
         }
 
+    def rejected_payload(row: dict[str, Any]) -> dict[str, Any]:
+        full_name = row.get("full_name", "")
+        return {
+            "full_name": full_name,
+            "html_url": row.get("html_url") or f"https://github.com/{full_name}",
+            "note": row.get("note", ""),
+            "first_seen": row.get("first_seen", ""),
+            "last_seen": row.get("last_seen", ""),
+        }
+
+    weekly_new_count = sum(1 for item in candidates if item.get("first_seen") == report_date)
+
     return {
         "date": report_date,
         "generated_at": now.isoformat(),
         "notice": "存活需在路由器面板用中国出口手动验证。本工具只做 GitHub 发现和格式预筛，不做云端 alive/health-check。",
+        "node_count_note": "节点数为链接计数(粗略,去重前)，仅供排序，实际可用数以路由器面板'存活/总'为准。",
         "summary": {
             "scanned_repos": total_repos,
             "passed_repos": total_passed,
-            "new_candidates": len(new_candidates),
+            "pending_candidates": len(candidates),
+            "weekly_new_candidates": weekly_new_count,
+            "new_candidates": weekly_new_count,
             "in_use_sources": len(in_use_rows),
+            "rejected_sources": len(rejected_rows),
         },
+        "candidates": [
+            candidate_payload(item)
+            for item in sorted(candidates, key=candidate_sort_key, reverse=True)
+        ],
         "new_candidates": [
             candidate_payload(item)
-            for item in sorted(new_candidates, key=candidate_sort_key, reverse=True)
+            for item in sorted(
+                [item for item in candidates if item.get("first_seen") == report_date],
+                key=candidate_sort_key,
+                reverse=True,
+            )
         ],
         "in_use": [in_use_payload(row) for row in in_use_rows],
+        "rejected": [rejected_payload(row) for row in sorted(rejected_rows, key=lambda item: item["full_name"].lower())],
     }
 
 
@@ -693,13 +772,15 @@ def update_report_archive(report_date: str, generated_at: str) -> None:
 def write_reports(
     report_date: str,
     now: datetime,
-    new_candidates: list[dict[str, Any]],
+    candidates: list[dict[str, Any]],
     in_use_rows: list[dict[str, Any]],
+    rejected_rows: list[dict[str, Any]],
     total_repos: int,
     total_passed: int,
 ) -> None:
     REPORTS_DIR.mkdir(parents=True, exist_ok=True)
-    payload = build_report_payload(report_date, now, new_candidates, in_use_rows, total_repos, total_passed)
+    payload = build_report_payload(report_date, now, candidates, in_use_rows, rejected_rows, total_repos, total_passed)
+    summary = payload["summary"]
     body = f"""# 免费节点池候选发现周报 - {report_date}
 
 > 存活需在路由器面板用中国出口手动验证。本工具只做 GitHub 发现和格式预筛，不做云端 alive/health-check。
@@ -707,19 +788,34 @@ def write_reports(
 - 生成时间：{now.strftime("%Y-%m-%d %H:%M:%S %Z")}
 - 搜索后进入仓库扫描：{total_repos}
 - 通过格式与节点数预筛：{total_passed}
-- 新增候选仓库：{len(new_candidates)}
+- 待验证候选：{summary["pending_candidates"]}
+- 本周新增：{summary["weekly_new_candidates"]}
+- 在用：{summary["in_use_sources"]}
+- 已拒：{summary["rejected_sources"]}
+- 节点数说明：{payload["node_count_note"]}
 
-## 🆕 本周新候选
+## 待验证候选
 
-{render_new_candidates_table(new_candidates)}
+本周新增 {summary["weekly_new_candidates"]} 个。以下列出 `known_sources.json` 中全部 `status=candidate` 的源。
+
+{render_candidate_table(candidates)}
 
 ## 📉 在用源体检
 
 {render_in_use_table(in_use_rows, now)}
 
+## 已拒源
+
+<details>
+<summary>展开查看 {summary["rejected_sources"]} 个 rejected 源</summary>
+
+{render_rejected_table(rejected_rows)}
+
+</details>
+
 ## 使用说明
 
-1. 先把「本周新候选」里的 jsdelivr URL 加到 OpenClash/mihomo 的多源订阅里。
+1. 先把「待验证候选」里的 jsdelivr URL 加到 OpenClash/mihomo 的多源订阅里。
 2. 只在路由器面板或中国大陆出口环境验证实际可用性。
 3. 可用则把 `known_sources.json` 中该仓库的 `status` 改为 `in-use`；不可用则改为 `rejected` 并补充 `note`。
 """
@@ -760,11 +856,13 @@ def main() -> int:
 
     new_candidates = update_known_sources(known, passed, today)
     in_use_rows = refresh_in_use_sources(client, known, today)
+    candidate_rows = known_status_rows(known, "candidate")
+    rejected_rows = known_status_rows(known, "rejected")
     save_known_sources(known)
-    write_reports(today, report_now, new_candidates, in_use_rows, len(repos), len(passed))
+    write_reports(today, report_now, candidate_rows, in_use_rows, rejected_rows, len(repos), len(passed))
 
     print(
-        f"[done] scanned={len(repos)} passed={len(passed)} new={len(new_candidates)} report=reports/{today}.md",
+        f"[done] scanned={len(repos)} passed={len(passed)} new={len(new_candidates)} pending={len(candidate_rows)} report=reports/{today}.md",
         file=sys.stderr,
     )
     return 0
