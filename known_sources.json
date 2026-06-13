@@ -1,0 +1,89 @@
+{
+  "0xRadikal/Free-v2ray-Configs": {
+    "branch": "main",
+    "first_seen": "2026-06-13",
+    "format": "base64",
+    "last_seen": "2026-06-13",
+    "path": "light/configs_base64.txt",
+    "status": "in-use",
+    "url": "https://testingcf.jsdelivr.net/gh/0xRadikal/Free-v2ray-Configs@main/light/configs_base64.txt"
+  },
+  "ALIILAPRO/v2rayNG-Config": {
+    "first_seen": "2026-06-13",
+    "last_seen": "2026-06-13",
+    "note": "性价比差0~1/83",
+    "status": "rejected"
+  },
+  "Au1rxx/free-vpn-subscriptions": {
+    "branch": "main",
+    "first_seen": "2026-06-13",
+    "format": "base64",
+    "last_seen": "2026-06-13",
+    "path": "output/v2ray-base64.txt",
+    "status": "in-use",
+    "url": "https://testingcf.jsdelivr.net/gh/Au1rxx/free-vpn-subscriptions@main/output/v2ray-base64.txt"
+  },
+  "MatinGhanbari/v2ray-configs": {
+    "first_seen": "2026-06-13",
+    "last_seen": "2026-06-13",
+    "note": "伊朗源中国出口0/198不自愈",
+    "status": "rejected"
+  },
+  "V2RayRoot/V2RayConfig": {
+    "branch": "main",
+    "first_seen": "2026-06-13",
+    "format": "plain",
+    "last_seen": "2026-06-13",
+    "path": "Config/vless.txt",
+    "status": "in-use",
+    "url": "https://testingcf.jsdelivr.net/gh/V2RayRoot/V2RayConfig@main/Config/vless.txt"
+  },
+  "igareck/vpn-configs-for-russia": {
+    "branch": "main",
+    "first_seen": "2026-06-13",
+    "format": "plain",
+    "last_seen": "2026-06-13",
+    "path": "BLACK_VLESS_RUS_mobile.txt",
+    "status": "in-use",
+    "url": "https://testingcf.jsdelivr.net/gh/igareck/vpn-configs-for-russia@main/BLACK_VLESS_RUS_mobile.txt"
+  },
+  "liketolivefree/kobabi": {
+    "first_seen": "2026-06-13",
+    "last_seen": "2026-06-13",
+    "note": "0/228全死",
+    "status": "rejected"
+  },
+  "roosterkid/openproxylist": {
+    "branch": "main",
+    "first_seen": "2026-06-13",
+    "format": "base64",
+    "last_seen": "2026-06-13",
+    "path": "V2RAY_BASE64.txt",
+    "status": "in-use",
+    "url": "https://testingcf.jsdelivr.net/gh/roosterkid/openproxylist@main/V2RAY_BASE64.txt"
+  },
+  "shaoyouvip/free": {
+    "branch": "main",
+    "first_seen": "2026-06-13",
+    "format": "clash",
+    "last_seen": "2026-06-13",
+    "path": "mihomo.yaml",
+    "status": "in-use",
+    "url": "https://testingcf.jsdelivr.net/gh/shaoyouvip/free@main/mihomo.yaml"
+  },
+  "ssrsub/ssr": {
+    "branch": "master",
+    "first_seen": "2026-06-13",
+    "format": "clash",
+    "last_seen": "2026-06-13",
+    "path": "clash.yaml",
+    "status": "in-use",
+    "url": "https://testingcf.jsdelivr.net/gh/ssrsub/ssr@master/clash.yaml"
+  },
+  "xiaoji235/airport-free": {
+    "first_seen": "2026-06-13",
+    "last_seen": "2026-06-13",
+    "note": "性价比差2/777，clash版多配置拼接解析崩",
+    "status": "rejected"
+  }
+}

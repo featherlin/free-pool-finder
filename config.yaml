@@ -1,0 +1,23 @@
+keywords:
+  - 免费节点 订阅
+  - 免费节点池
+  - 免费机场订阅
+  - clash 免费订阅
+  - mihomo 免费订阅
+  - v2ray 免费节点
+  - vless 免费节点
+  - free vless subscription
+  - free vmess subscription
+  - clash mihomo free
+  - clash free subscription
+  - v2ray free subscription
+  - nodefree
+  - free proxy pool v2ray
+  - free vpn subscription
+
+days_active: 14
+per_page: 20
+max_repos: 80
+min_nodes: 20
+mirror: "https://testingcf.jsdelivr.net/gh/{owner}/{repo}@{branch}/{path}"
+search_sleep_seconds: 2.6

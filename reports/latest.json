@@ -1,0 +1,13 @@
+{
+  "date": "",
+  "generated_at": "",
+  "notice": "存活需在路由器面板用中国出口手动验证。本工具只做 GitHub 发现和格式预筛，不做云端 alive/health-check。",
+  "summary": {
+    "scanned_repos": 0,
+    "passed_repos": 0,
+    "new_candidates": 0,
+    "in_use_sources": 0
+  },
+  "new_candidates": [],
+  "in_use": []
+}

@@ -1,0 +1,720 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>free-pool-finder 周报</title>
+    <meta
+      name="description"
+      content="每周发现免费节点池和订阅源候选仓库，只做发现与预筛，不做云端存活检测。"
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f5f7fb;
+        --panel: #ffffff;
+        --panel-soft: #eef6f3;
+        --ink: #172033;
+        --muted: #687386;
+        --line: #dce3ec;
+        --blue: #2563eb;
+        --teal: #0f766e;
+        --amber: #b45309;
+        --red: #b42318;
+        --shadow: 0 12px 35px rgba(31, 41, 55, 0.09);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family:
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        line-height: 1.55;
+      }
+
+      a {
+        color: var(--blue);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .topbar {
+        border-bottom: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.88);
+        backdrop-filter: blur(14px);
+        position: sticky;
+        top: 0;
+        z-index: 20;
+      }
+
+      .topbar-inner {
+        width: min(1180px, calc(100% - 32px));
+        margin: 0 auto;
+        min-height: 58px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        min-width: 0;
+        font-weight: 750;
+        letter-spacing: 0;
+      }
+
+      .brand-mark {
+        width: 30px;
+        height: 30px;
+        border-radius: 8px;
+        background:
+          linear-gradient(135deg, rgba(37, 99, 235, 0.95), rgba(15, 118, 110, 0.95)),
+          #2563eb;
+        display: grid;
+        place-items: center;
+        color: white;
+        font-size: 15px;
+        line-height: 1;
+      }
+
+      .brand-text {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .wrap {
+        width: min(1180px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 28px 0 44px;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.2fr) minmax(260px, 0.8fr);
+        gap: 20px;
+        align-items: stretch;
+      }
+
+      .hero-main,
+      .notice,
+      .panel,
+      .metric {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+      }
+
+      .hero-main {
+        padding: 28px;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        margin-bottom: 10px;
+        font-size: 32px;
+        line-height: 1.2;
+        letter-spacing: 0;
+      }
+
+      .sub {
+        max-width: 760px;
+        margin-bottom: 18px;
+        color: var(--muted);
+        font-size: 16px;
+      }
+
+      .meta-line {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .pill {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 5px 10px;
+        background: #fbfcff;
+      }
+
+      .notice {
+        padding: 22px;
+        background: var(--panel-soft);
+        border-color: #b7ded2;
+      }
+
+      .notice h2 {
+        font-size: 16px;
+        margin-bottom: 8px;
+        color: var(--teal);
+      }
+
+      .notice p {
+        margin: 0;
+        color: #315a56;
+      }
+
+      .metrics {
+        margin: 20px 0;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .metric {
+        padding: 18px;
+        box-shadow: none;
+      }
+
+      .metric-value {
+        font-size: 28px;
+        font-weight: 780;
+        line-height: 1.1;
+      }
+
+      .metric-label {
+        margin-top: 6px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .panel {
+        margin-top: 20px;
+        overflow: hidden;
+      }
+
+      .panel-head {
+        padding: 18px 20px;
+        border-bottom: 1px solid var(--line);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .panel-head h2 {
+        margin: 0;
+        font-size: 18px;
+        letter-spacing: 0;
+      }
+
+      .panel-note {
+        color: var(--muted);
+        font-size: 13px;
+        text-align: right;
+      }
+
+      .table-wrap {
+        width: 100%;
+        overflow-x: auto;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 860px;
+      }
+
+      th,
+      td {
+        padding: 13px 14px;
+        border-bottom: 1px solid var(--line);
+        vertical-align: top;
+        text-align: left;
+        font-size: 14px;
+      }
+
+      th {
+        color: #3c4658;
+        background: #f8fafc;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0;
+      }
+
+      tr:last-child td {
+        border-bottom: 0;
+      }
+
+      .num {
+        text-align: right;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .repo {
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      .url-cell {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      .url-text {
+        max-width: 430px;
+        overflow-wrap: anywhere;
+        color: #334155;
+        font-family:
+          ui-monospace,
+          SFMono-Regular,
+          Menlo,
+          Monaco,
+          Consolas,
+          "Liberation Mono",
+          monospace;
+        font-size: 12px;
+      }
+
+      button {
+        border: 1px solid var(--line);
+        background: #ffffff;
+        color: #233047;
+        border-radius: 6px;
+        padding: 6px 9px;
+        cursor: pointer;
+        font: inherit;
+        font-size: 12px;
+        white-space: nowrap;
+      }
+
+      button:hover {
+        border-color: #9eb1c9;
+        background: #f8fafc;
+      }
+
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        height: 24px;
+        padding: 0 8px;
+        border-radius: 999px;
+        background: #e8f0ff;
+        color: #1d4ed8;
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .tag.clash {
+        background: #fef3c7;
+        color: var(--amber);
+      }
+
+      .verdict {
+        color: var(--teal);
+        font-weight: 700;
+      }
+
+      .verdict.warn {
+        color: var(--amber);
+      }
+
+      .verdict.err {
+        color: var(--red);
+      }
+
+      .empty,
+      .error {
+        padding: 24px 20px;
+        color: var(--muted);
+      }
+
+      .error {
+        color: var(--red);
+      }
+
+      .archive-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 10px;
+        padding: 18px 20px 22px;
+      }
+
+      .archive-link {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 12px;
+        background: #fbfcff;
+      }
+
+      .archive-date {
+        font-weight: 750;
+        color: var(--ink);
+      }
+
+      .archive-path {
+        margin-top: 4px;
+        color: var(--muted);
+        font-size: 12px;
+        overflow-wrap: anywhere;
+      }
+
+      .footer {
+        margin-top: 26px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      @media (max-width: 820px) {
+        .topbar-inner,
+        .wrap {
+          width: min(100% - 22px, 1180px);
+        }
+
+        .hero {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-main {
+          padding: 22px;
+        }
+
+        h1 {
+          font-size: 27px;
+        }
+
+        .metrics {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .nav {
+          display: none;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .metrics {
+          grid-template-columns: 1fr;
+        }
+
+        .panel-head {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .panel-note {
+          text-align: left;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">F</div>
+          <div class="brand-text">free-pool-finder</div>
+        </div>
+        <nav class="nav" aria-label="页面导航">
+          <a href="#new">新候选</a>
+          <a href="#in-use">在用源</a>
+          <a href="#archive">归档</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section class="hero">
+        <div class="hero-main">
+          <h1>免费节点池候选发现周报</h1>
+          <p class="sub">
+            每周从 GitHub 自动发现可作为 OpenClash/mihomo 多源免费池补充的订阅源候选，只做格式预筛和候选整理。
+          </p>
+          <div class="meta-line">
+            <span class="pill" id="report-date">报告日期：加载中</span>
+            <span class="pill" id="generated-at">生成时间：加载中</span>
+          </div>
+        </div>
+        <aside class="notice">
+          <h2>边界</h2>
+          <p id="notice">
+            存活需在路由器面板用中国出口手动验证。本工具不做云端 alive/health-check。
+          </p>
+        </aside>
+      </section>
+
+      <section class="metrics" aria-label="摘要指标">
+        <div class="metric">
+          <div class="metric-value" id="metric-scanned">-</div>
+          <div class="metric-label">扫描仓库</div>
+        </div>
+        <div class="metric">
+          <div class="metric-value" id="metric-passed">-</div>
+          <div class="metric-label">通过预筛</div>
+        </div>
+        <div class="metric">
+          <div class="metric-value" id="metric-new">-</div>
+          <div class="metric-label">本周新候选</div>
+        </div>
+        <div class="metric">
+          <div class="metric-value" id="metric-in-use">-</div>
+          <div class="metric-label">在用源</div>
+        </div>
+      </section>
+
+      <section class="panel" id="new">
+        <div class="panel-head">
+          <h2>本周新候选</h2>
+          <div class="panel-note">按格式优先级和节点数排序</div>
+        </div>
+        <div class="table-wrap" id="new-table"></div>
+      </section>
+
+      <section class="panel" id="in-use">
+        <div class="panel-head">
+          <h2>在用源体检</h2>
+          <div class="panel-note">只看仓库更新，不代表节点存活</div>
+        </div>
+        <div class="table-wrap" id="in-use-table"></div>
+      </section>
+
+      <section class="panel" id="archive">
+        <div class="panel-head">
+          <h2>历史归档</h2>
+          <div class="panel-note">Markdown 和 JSON 保存在仓库 reports 目录</div>
+        </div>
+        <div class="archive-list" id="archive-list"></div>
+      </section>
+
+      <footer class="footer">
+        GitHub Actions 每周日 12:00 北京时间运行。Vercel 在仓库更新后自动部署最新静态页面。
+      </footer>
+    </main>
+
+    <script>
+      const $ = (id) => document.getElementById(id);
+
+      function esc(value) {
+        return String(value ?? "")
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#039;");
+      }
+
+      function num(value) {
+        return Number(value || 0).toLocaleString("zh-CN");
+      }
+
+      function formatDateTime(value) {
+        if (!value) return "";
+        const date = new Date(value);
+        if (Number.isNaN(date.getTime())) return value;
+        return date.toLocaleString("zh-CN", {
+          timeZone: "Asia/Shanghai",
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit",
+          hour: "2-digit",
+          minute: "2-digit",
+        });
+      }
+
+      async function fetchJson(path) {
+        const response = await fetch(path, { cache: "no-store" });
+        if (!response.ok) throw new Error(`${path} ${response.status}`);
+        return response.json();
+      }
+
+      function copyButton(url) {
+        return `<button type="button" data-copy="${esc(url)}" title="复制订阅 URL">复制</button>`;
+      }
+
+      function tag(format) {
+        const klass = format === "clash" ? "tag clash" : "tag";
+        return `<span class="${klass}">${esc(format)}</span>`;
+      }
+
+      function renderUrl(url) {
+        if (!url) return "";
+        return `<div class="url-cell"><span class="url-text">${esc(url)}</span>${copyButton(url)}</div>`;
+      }
+
+      function renderNewCandidates(rows) {
+        if (!rows || rows.length === 0) {
+          $("new-table").innerHTML = '<div class="empty">本周没有发现超过预筛门槛的新仓库。</div>';
+          return;
+        }
+
+        const body = rows
+          .map(
+            (row) => `
+              <tr>
+                <td><a class="repo" href="${esc(row.html_url)}" target="_blank" rel="noreferrer">${esc(row.full_name)}</a></td>
+                <td>${renderUrl(row.url)}</td>
+                <td>${tag(row.format)}</td>
+                <td class="num">${num(row.nodes)}</td>
+                <td class="num">${num(row.stars)}</td>
+                <td>${esc(row.repo_pushed_at)}</td>
+                <td>${esc(row.description)}</td>
+              </tr>
+            `,
+          )
+          .join("");
+
+        $("new-table").innerHTML = `
+          <table>
+            <thead>
+              <tr>
+                <th>仓库</th>
+                <th>订阅 URL</th>
+                <th>格式</th>
+                <th class="num">节点数</th>
+                <th class="num">Stars</th>
+                <th>最近更新</th>
+                <th>简介</th>
+              </tr>
+            </thead>
+            <tbody>${body}</tbody>
+          </table>
+        `;
+      }
+
+      function verdictClass(verdict) {
+        if (!verdict) return "verdict";
+        if (verdict.includes("失败")) return "verdict err";
+        if (verdict.includes("超过")) return "verdict warn";
+        return "verdict";
+      }
+
+      function renderInUse(rows) {
+        if (!rows || rows.length === 0) {
+          $("in-use-table").innerHTML = '<div class="empty">known_sources.json 里没有 status=in-use 的源。</div>';
+          return;
+        }
+
+        const body = rows
+          .map(
+            (row) => `
+              <tr>
+                <td><a class="repo" href="${esc(row.html_url)}" target="_blank" rel="noreferrer">${esc(row.full_name)}</a></td>
+                <td>${renderUrl(row.url)}</td>
+                <td>${tag(row.format)}</td>
+                <td class="num">${num(row.stars)}</td>
+                <td>${esc(row.repo_pushed_at)}</td>
+                <td class="num">${row.age_days === null || row.age_days === undefined ? "" : num(row.age_days)}</td>
+                <td><span class="${verdictClass(row.verdict)}">${esc(row.verdict)}</span></td>
+              </tr>
+            `,
+          )
+          .join("");
+
+        $("in-use-table").innerHTML = `
+          <table>
+            <thead>
+              <tr>
+                <th>在用源</th>
+                <th>订阅 URL</th>
+                <th>格式</th>
+                <th class="num">Stars</th>
+                <th>仓库最近更新</th>
+                <th class="num">距今</th>
+                <th>结论</th>
+              </tr>
+            </thead>
+            <tbody>${body}</tbody>
+          </table>
+        `;
+      }
+
+      function renderArchive(rows) {
+        if (!rows || rows.length === 0) {
+          $("archive-list").innerHTML = '<div class="empty">等待首次周报生成。</div>';
+          return;
+        }
+
+        $("archive-list").innerHTML = rows
+          .map(
+            (row) => `
+              <a class="archive-link" href="${esc(row.markdown)}">
+                <div class="archive-date">${esc(row.date)}</div>
+                <div class="archive-path">${esc(row.markdown)}</div>
+              </a>
+            `,
+          )
+          .join("");
+      }
+
+      async function init() {
+        try {
+          const latest = await fetchJson("reports/latest.json");
+          $("report-date").textContent = `报告日期：${latest.date || "-"}`;
+          $("generated-at").textContent = `生成时间：${formatDateTime(latest.generated_at) || "-"}`;
+          $("notice").textContent = latest.notice || $("notice").textContent;
+
+          const summary = latest.summary || {};
+          $("metric-scanned").textContent = num(summary.scanned_repos);
+          $("metric-passed").textContent = num(summary.passed_repos);
+          $("metric-new").textContent = num(summary.new_candidates);
+          $("metric-in-use").textContent = num(summary.in_use_sources);
+
+          renderNewCandidates(latest.new_candidates);
+          renderInUse(latest.in_use);
+        } catch (error) {
+          $("new-table").innerHTML = '<div class="error">还没有可展示的周报。请先在 GitHub Actions 手动运行一次 workflow。</div>';
+          $("in-use-table").innerHTML = '<div class="empty">等待周报生成。</div>';
+        }
+
+        try {
+          const archive = await fetchJson("reports/index.json");
+          renderArchive(archive);
+        } catch (error) {
+          renderArchive([]);
+        }
+      }
+
+      document.addEventListener("click", async (event) => {
+        const button = event.target.closest("[data-copy]");
+        if (!button) return;
+        const value = button.getAttribute("data-copy");
+        try {
+          await navigator.clipboard.writeText(value);
+          const old = button.textContent;
+          button.textContent = "已复制";
+          setTimeout(() => {
+            button.textContent = old;
+          }, 1100);
+        } catch (error) {
+          button.textContent = "复制失败";
+        }
+      });
+
+      init();
+    </script>
+  </body>
+</html>
