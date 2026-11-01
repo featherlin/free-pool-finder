@@ -1,18 +1,34 @@
 {
-  "date": "2026-10-25",
-  "generated_at": "2026-10-25T16:56:28.778284+08:00",
+  "date": "2026-11-01",
+  "generated_at": "2026-11-01T19:00:51.115457+08:00",
   "notice": "存活需在路由器面板用中国出口手动验证。本工具只做 GitHub 发现和格式预筛，不做云端 alive/health-check。",
   "node_count_note": "节点数为链接计数(粗略,去重前)，仅供排序，实际可用数以路由器面板'存活/总'为准。",
   "summary": {
     "scanned_repos": 80,
-    "passed_repos": 38,
-    "pending_candidates": 80,
-    "weekly_new_candidates": 5,
-    "new_candidates": 5,
+    "passed_repos": 44,
+    "pending_candidates": 83,
+    "weekly_new_candidates": 3,
+    "new_candidates": 3,
     "in_use_sources": 7,
     "rejected_sources": 4
   },
   "candidates": [
+    {
+      "full_name": "3000S-HTTP/sNSub",
+      "html_url": "https://github.com/3000S-HTTP/sNSub",
+      "url": "https://testingcf.jsdelivr.net/gh/3000S-HTTP/sNSub@main/output/vless.txt",
+      "format": "plain",
+      "nodes": 13441,
+      "stars": 5,
+      "repo_pushed_at": "2026-11-01",
+      "description": "Auto-updating V2Ray/Xray subscription built from public free-config sources",
+      "first_seen": "2026-09-27",
+      "last_seen": "2026-11-01",
+      "risk_hints": [
+        "⚠低星(信任低,可能SEO垃圾仓库)",
+        "⚠超大池(探测负载高,留意)"
+      ]
+    },
     {
       "full_name": "morpheusadam/v2ray-config",
       "html_url": "https://github.com/morpheusadam/v2ray-config",
@@ -24,22 +40,6 @@
       "description": "Free V2Ray subscription links, rebuilt from measurement every day. VLESS, VMess, Trojan, Shadowsocks, Hysteria2, TUIC and Reality configs, plus 29 ready-made subscription bundles and a proxy list proved to reach GitHub from blocked networks. Every link is fetched, decoded and dialled before it is published. No signup, no tracking.",
       "first_seen": "2026-08-16",
       "last_seen": "2026-09-06",
-      "risk_hints": [
-        "⚠低星(信任低,可能SEO垃圾仓库)",
-        "⚠超大池(探测负载高,留意)"
-      ]
-    },
-    {
-      "full_name": "3000S-HTTP/sNSub",
-      "html_url": "https://github.com/3000S-HTTP/sNSub",
-      "url": "https://testingcf.jsdelivr.net/gh/3000S-HTTP/sNSub@main/output/vless.txt",
-      "format": "plain",
-      "nodes": 13186,
-      "stars": 5,
-      "repo_pushed_at": "2026-10-25",
-      "description": "Auto-updating V2Ray/Xray subscription built from public free-config sources",
-      "first_seen": "2026-09-27",
-      "last_seen": "2026-10-25",
       "risk_hints": [
         "⚠低星(信任低,可能SEO垃圾仓库)",
         "⚠超大池(探测负载高,留意)"
@@ -93,18 +93,17 @@
       ]
     },
     {
-      "full_name": "alireza786786/Free-V2ray-Configs",
-      "html_url": "https://github.com/alireza786786/Free-V2ray-Configs",
-      "url": "https://testingcf.jsdelivr.net/gh/alireza786786/Free-V2ray-Configs@main/servers/vless.txt",
+      "full_name": "Barabama/FreeNodes",
+      "html_url": "https://github.com/Barabama/FreeNodes",
+      "url": "https://testingcf.jsdelivr.net/gh/Barabama/FreeNodes@main/nodes/nodev2ray.txt",
       "format": "plain",
-      "nodes": 7028,
-      "stars": 2,
-      "repo_pushed_at": "2026-10-25",
-      "description": "🚀 آپدیت خودکار هر ۳۰ دقیقه از گیت‌هاب و تلگرام | جمع‌آوری کانفیگ‌های رایگان V2Ray, VLESS, VMess, Trojan, Hysteria2 با پینگ زیر ۵۰۰ms و الگوی اختصاصی Goodbaye 🔹 Automated free V2Ray collector from GitHub & Telegram",
-      "first_seen": "2026-10-25",
-      "last_seen": "2026-10-25",
+      "nodes": 5557,
+      "stars": 3360,
+      "repo_pushed_at": "2026-11-01",
+      "description": "v2ray、clash免费节点爬虫，自动更新",
+      "first_seen": "2026-06-13",
+      "last_seen": "2026-11-01",
       "risk_hints": [
-        "⚠低星(信任低,可能SEO垃圾仓库)",
         "⚠超大池(探测负载高,留意)"
       ]
     },
@@ -113,29 +112,14 @@
       "html_url": "https://github.com/getpower668/kuaiji-vpn",
       "url": "https://testingcf.jsdelivr.net/gh/getpower668/kuaiji-vpn@master/dist/v2ray.txt",
       "format": "plain",
-      "nodes": 4737,
+      "nodes": 4850,
       "stars": 0,
-      "repo_pushed_at": "2026-10-18",
+      "repo_pushed_at": "2026-11-01",
       "description": "快极VPN - v2rayNG fork with 3 preloaded free subscriptions + 6h auto-update",
       "first_seen": "2026-06-21",
-      "last_seen": "2026-10-18",
+      "last_seen": "2026-11-01",
       "risk_hints": [
         "⚠低星(信任低,可能SEO垃圾仓库)",
-        "⚠超大池(探测负载高,留意)"
-      ]
-    },
-    {
-      "full_name": "Barabama/FreeNodes",
-      "html_url": "https://github.com/Barabama/FreeNodes",
-      "url": "https://testingcf.jsdelivr.net/gh/Barabama/FreeNodes@main/nodes/nodev2ray.txt",
-      "format": "plain",
-      "nodes": 4679,
-      "stars": 3316,
-      "repo_pushed_at": "2026-10-25",
-      "description": "v2ray、clash免费节点爬虫，自动更新",
-      "first_seen": "2026-06-13",
-      "last_seen": "2026-10-25",
-      "risk_hints": [
         "⚠超大池(探测负载高,留意)"
       ]
     },
@@ -156,32 +140,47 @@
       ]
     },
     {
+      "full_name": "cbusifabcap/daily_free_vpn",
+      "html_url": "https://github.com/cbusifabcap/daily_free_vpn",
+      "url": "https://testingcf.jsdelivr.net/gh/cbusifabcap/daily_free_vpn@main/sub/sub.yml",
+      "format": "base64",
+      "nodes": 2829,
+      "stars": 383,
+      "repo_pushed_at": "2026-11-01",
+      "description": "分享免费节点、免费机场、付费机场、电报代理、ssr节点、v2ray节点、v2ray订阅、clash节点、clash订阅、shadowrocket订阅、Quantumult X订阅、Clash .NET订阅、小火箭节点、小猫咪节点、免费翻墙、免费科学上网、免费梯子、免费trojan节点、蓝灯、谷歌商店、翻墙梯子、安卓VPN、iphone翻墙节点、iphone vpn、一键翻墙浏览器、节点分享、免费SSR、蓝灯、谷歌商店、V2ary免费节点、代理、proxy代理科学上网、TG代理、电报代理、Telegram代理、ip加速、翻墙软件、socks5、破解VPN、机场推荐、节点订阅、破解VPN  ",
+      "first_seen": "2026-07-05",
+      "last_seen": "2026-11-01",
+      "risk_hints": [
+        "⚠超大池(探测负载高,留意)"
+      ]
+    },
+    {
+      "full_name": "svinakraft-maker/FlareFeed",
+      "html_url": "https://github.com/svinakraft-maker/FlareFeed",
+      "url": "https://testingcf.jsdelivr.net/gh/svinakraft-maker/FlareFeed@main/public/vless.txt",
+      "format": "plain",
+      "nodes": 2014,
+      "stars": 28,
+      "repo_pushed_at": "2026-11-01",
+      "description": "🛜🛜🛜 Free VPN 🛜🛜🛜, Russia Bybass (VLESS/VMess/Trojan/SS/Hy2/TUIC) Through Cloudflare Workers.",
+      "first_seen": "2026-10-04",
+      "last_seen": "2026-11-01",
+      "risk_hints": [
+        "⚠超大池(探测负载高,留意)"
+      ]
+    },
+    {
       "full_name": "Alirewa/V2ray-Configs",
       "html_url": "https://github.com/Alirewa/V2ray-Configs",
       "url": "https://testingcf.jsdelivr.net/gh/Alirewa/V2ray-Configs@main/config.txt",
       "format": "plain",
       "nodes": 2000,
-      "stars": 30,
-      "repo_pushed_at": "2026-10-25",
+      "stars": 34,
+      "repo_pushed_at": "2026-11-01",
       "description": "Free V2Ray / Xray subscription link — 1000+ configs auto-collected every 15 min from 180+ Telegram channels and GitHub sources. No login, no ads.",
       "first_seen": "2026-06-13",
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-11-01",
       "risk_hints": []
-    },
-    {
-      "full_name": "lorenzazy7kenyon/free-vpn-subscriptions",
-      "html_url": "https://github.com/lorenzazy7kenyon/free-vpn-subscriptions",
-      "url": "https://testingcf.jsdelivr.net/gh/lorenzazy7kenyon/free-vpn-subscriptions@main/output/v2ray-base64.txt",
-      "format": "base64",
-      "nodes": 2000,
-      "stars": 0,
-      "repo_pushed_at": "2026-10-25",
-      "description": "?????????? VPN-???????? - ?????????? ?????? ???, ??????? ?????????. Clash / sing-box / v2ray",
-      "first_seen": "2026-10-18",
-      "last_seen": "2026-10-25",
-      "risk_hints": [
-        "⚠低星(信任低,可能SEO垃圾仓库)"
-      ]
     },
     {
       "full_name": "nukcrow/black-crow",
@@ -190,54 +189,41 @@
       "format": "plain",
       "nodes": 2000,
       "stars": 10,
-      "repo_pushed_at": "2026-10-25",
+      "repo_pushed_at": "2026-11-01",
       "description": "Automated high-quality V2Ray/Xray subscription collector (VLESS, VMess, Hysteria2) updated every 3 hours.",
       "first_seen": "2026-08-02",
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-11-01",
       "risk_hints": []
-    },
-    {
-      "full_name": "chenzhihan1751-cyber/node-sub-zixf",
-      "html_url": "https://github.com/chenzhihan1751-cyber/node-sub-zixf",
-      "url": "https://testingcf.jsdelivr.net/gh/chenzhihan1751-cyber/node-sub-zixf@main/sub/base64.txt",
-      "format": "base64",
-      "nodes": 1828,
-      "stars": 4,
-      "repo_pushed_at": "2026-10-25",
-      "description": "自动更新的免费节点订阅：每 6 小时聚合 9 个公开源，清洗广告节点 + 去重 + TCP 存活检测，输出 V2rayN / Clash / Mihomo 可用的 base64 订阅 | free v2ray clash nodes subscription, auto-updated every 6 hours",
-      "first_seen": "2026-10-11",
-      "last_seen": "2026-10-25",
-      "risk_hints": [
-        "⚠低星(信任低,可能SEO垃圾仓库)"
-      ]
     },
     {
       "full_name": "jiuzihe36/free-vpn-sub",
       "html_url": "https://github.com/jiuzihe36/free-vpn-sub",
       "url": "https://testingcf.jsdelivr.net/gh/jiuzihe36/free-vpn-sub@main/sub/by-protocol/vmess.txt",
       "format": "plain",
-      "nodes": 1761,
+      "nodes": 1928,
       "stars": 0,
-      "repo_pushed_at": "2026-10-25",
+      "repo_pushed_at": "2026-11-01",
       "description": "Free VPN subscription aggregator with tags",
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-11-01",
       "risk_hints": [
         "⚠低星(信任低,可能SEO垃圾仓库)"
       ]
     },
     {
-      "full_name": "cbusifabcap/daily_free_vpn",
-      "html_url": "https://github.com/cbusifabcap/daily_free_vpn",
-      "url": "https://testingcf.jsdelivr.net/gh/cbusifabcap/daily_free_vpn@main/sub/sub.yml",
+      "full_name": "pctaha501-create/FreeVPN-Subscription-Mirror",
+      "html_url": "https://github.com/pctaha501-create/FreeVPN-Subscription-Mirror",
+      "url": "https://testingcf.jsdelivr.net/gh/pctaha501-create/FreeVPN-Subscription-Mirror@main/output/v2ray-base64.txt",
       "format": "base64",
-      "nodes": 1632,
-      "stars": 360,
-      "repo_pushed_at": "2026-10-25",
-      "description": "分享免费节点、免费机场、付费机场、电报代理、ssr节点、v2ray节点、v2ray订阅、clash节点、clash订阅、shadowrocket订阅、Quantumult X订阅、Clash .NET订阅、小火箭节点、小猫咪节点、免费翻墙、免费科学上网、免费梯子、免费trojan节点、蓝灯、谷歌商店、翻墙梯子、安卓VPN、iphone翻墙节点、iphone vpn、一键翻墙浏览器、节点分享、免费SSR、蓝灯、谷歌商店、V2ary免费节点、代理、proxy代理科学上网、TG代理、电报代理、Telegram代理、ip加速、翻墙软件、socks5、破解VPN、机场推荐、节点订阅、破解VPN  ",
-      "first_seen": "2026-07-05",
-      "last_seen": "2026-10-25",
-      "risk_hints": []
+      "nodes": 1751,
+      "stars": 0,
+      "repo_pushed_at": "2026-11-01",
+      "description": "Automatically refreshed mirror of public, externally tested V2Ray/VLESS subscription configs. Not a private VPN server.",
+      "first_seen": "2026-11-01",
+      "last_seen": "2026-11-01",
+      "risk_hints": [
+        "⚠低星(信任低,可能SEO垃圾仓库)"
+      ]
     },
     {
       "full_name": "freenodess/freenodess",
@@ -249,34 +235,6 @@
       "repo_pushed_at": "2026-10-25",
       "description": "免费节点,每天更新，支持 Clash、sing-box、v2ray。  可按国家订阅，可覆盖全球多个地区，如日本、美国、新加坡、香港、欧洲等   客户端支持：FlClash、Clash Verge、ClashX、v2rayNG、Shadowrocket、sing-box 等。",
       "first_seen": "2026-09-06",
-      "last_seen": "2026-10-25",
-      "risk_hints": []
-    },
-    {
-      "full_name": "worldmarketing02-design/proxy-master-list",
-      "html_url": "https://github.com/worldmarketing02-design/proxy-master-list",
-      "url": "https://testingcf.jsdelivr.net/gh/worldmarketing02-design/proxy-master-list@main/sub.txt",
-      "format": "base64",
-      "nodes": 1570,
-      "stars": 0,
-      "repo_pushed_at": "2026-10-18",
-      "description": "auto scrape free vpn subscription list for the secure browser",
-      "first_seen": "2026-06-13",
-      "last_seen": "2026-10-18",
-      "risk_hints": [
-        "⚠低星(信任低,可能SEO垃圾仓库)"
-      ]
-    },
-    {
-      "full_name": "VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy",
-      "html_url": "https://github.com/VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy",
-      "url": "https://testingcf.jsdelivr.net/gh/VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy@main/combine/v2ray.config.txt",
-      "format": "base64",
-      "nodes": 1511,
-      "stars": 5659,
-      "repo_pushed_at": "2026-10-25",
-      "description": "Top free VPN (ClashX & V2Ray proxy) with subscription links. [免费VPN、免费梯子、免费科学上网、免费订阅链接、免费节点、精选、ClashX & V2Ray 教程]",
-      "first_seen": "2026-10-11",
       "last_seen": "2026-10-25",
       "risk_hints": []
     },
@@ -296,45 +254,49 @@
       ]
     },
     {
-      "full_name": "svinakraft-maker/FlareFeed",
-      "html_url": "https://github.com/svinakraft-maker/FlareFeed",
-      "url": "https://testingcf.jsdelivr.net/gh/svinakraft-maker/FlareFeed@main/public/vless.txt",
-      "format": "plain",
-      "nodes": 1479,
-      "stars": 23,
-      "repo_pushed_at": "2026-10-18",
-      "description": "🛜🛜🛜 Free VPN 🛜🛜🛜, Russia Bybass (VLESS/VMess/Trojan/SS/Hy2/TUIC) Through Cloudflare Workers.",
-      "first_seen": "2026-10-04",
-      "last_seen": "2026-10-18",
-      "risk_hints": []
-    },
-    {
-      "full_name": "wa3duck/freenodes",
-      "html_url": "https://github.com/wa3duck/freenodes",
-      "url": "https://testingcf.jsdelivr.net/gh/wa3duck/freenodes@main/output/v2ray.txt",
+      "full_name": "worldmarketing02-design/proxy-master-list",
+      "html_url": "https://github.com/worldmarketing02-design/proxy-master-list",
+      "url": "https://testingcf.jsdelivr.net/gh/worldmarketing02-design/proxy-master-list@main/sub.txt",
       "format": "base64",
-      "nodes": 1188,
+      "nodes": 1215,
       "stars": 0,
-      "repo_pushed_at": "2026-09-27",
-      "description": "免费节点自动测活订阅池",
-      "first_seen": "2026-09-27",
-      "last_seen": "2026-09-27",
+      "repo_pushed_at": "2026-11-01",
+      "description": "auto scrape free vpn subscription list for the secure browser",
+      "first_seen": "2026-06-13",
+      "last_seen": "2026-11-01",
       "risk_hints": [
         "⚠低星(信任低,可能SEO垃圾仓库)"
       ]
     },
     {
-      "full_name": "yy1588133/proxy-pool",
-      "html_url": "https://github.com/yy1588133/proxy-pool",
-      "url": "https://testingcf.jsdelivr.net/gh/yy1588133/proxy-pool@main/v2ray.txt",
+      "full_name": "MahanKenway/Freedom-V2Ray",
+      "html_url": "https://github.com/MahanKenway/Freedom-V2Ray",
+      "url": "https://testingcf.jsdelivr.net/gh/MahanKenway/Freedom-V2Ray@main/configs/vmess.txt",
+      "format": "plain",
+      "nodes": 1083,
+      "stars": 120,
+      "repo_pushed_at": "2026-11-01",
+      "description": "V2Ray Collector | Auto-Update every 2 hours |VLESS, VMESS, Trojan & Reality configs. 🕊️ For a Free Iran - برای آزادی ایران",
+      "first_seen": "2026-06-13",
+      "last_seen": "2026-11-01",
+      "risk_hints": [
+        "🇮🇷伊朗源(地理错配,中国出口大概率连不上)"
+      ]
+    },
+    {
+      "full_name": "chenzhihan1751-cyber/node-sub-zixf",
+      "html_url": "https://github.com/chenzhihan1751-cyber/node-sub-zixf",
+      "url": "https://testingcf.jsdelivr.net/gh/chenzhihan1751-cyber/node-sub-zixf@main/sub/base64.txt",
       "format": "base64",
-      "nodes": 1036,
-      "stars": 31,
-      "repo_pushed_at": "2026-10-18",
-      "description": "自动聚合免费节点订阅（Clash/v2rayN），每6小时更新",
-      "first_seen": "2026-08-23",
-      "last_seen": "2026-10-18",
-      "risk_hints": []
+      "nodes": 1006,
+      "stars": 4,
+      "repo_pushed_at": "2026-11-01",
+      "description": "自动更新的免费节点订阅：每 6 小时聚合 9 个公开源，清洗广告节点 + 去重 + TCP 存活检测，输出 V2rayN / Clash / Mihomo 可用的 base64 订阅 | free v2ray clash nodes subscription, auto-updated every 6 hours",
+      "first_seen": "2026-10-11",
+      "last_seen": "2026-11-01",
+      "risk_hints": [
+        "⚠低星(信任低,可能SEO垃圾仓库)"
+      ]
     },
     {
       "full_name": "peacefish/nodefree",
@@ -343,26 +305,11 @@
       "format": "base64",
       "nodes": 979,
       "stars": 33,
-      "repo_pushed_at": "2026-10-25",
+      "repo_pushed_at": "2026-11-01",
       "description": "nodefree",
       "first_seen": "2026-06-13",
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-11-01",
       "risk_hints": []
-    },
-    {
-      "full_name": "MahanKenway/Freedom-V2Ray",
-      "html_url": "https://github.com/MahanKenway/Freedom-V2Ray",
-      "url": "https://testingcf.jsdelivr.net/gh/MahanKenway/Freedom-V2Ray@main/configs/vmess.txt",
-      "format": "plain",
-      "nodes": 973,
-      "stars": 118,
-      "repo_pushed_at": "2026-10-25",
-      "description": "V2Ray Collector | Auto-Update every 2 hours |VLESS, VMESS, Trojan & Reality configs. 🕊️ For a Free Iran - برای آزادی ایران",
-      "first_seen": "2026-06-13",
-      "last_seen": "2026-10-25",
-      "risk_hints": [
-        "🇮🇷伊朗源(地理错配,中国出口大概率连不上)"
-      ]
     },
     {
       "full_name": "noahclanman/free-xray-gcp",
@@ -395,16 +342,72 @@
       ]
     },
     {
+      "full_name": "wa3duck/freenodes",
+      "html_url": "https://github.com/wa3duck/freenodes",
+      "url": "https://testingcf.jsdelivr.net/gh/wa3duck/freenodes@main/output/v2ray.txt",
+      "format": "base64",
+      "nodes": 838,
+      "stars": 1,
+      "repo_pushed_at": "2026-11-01",
+      "description": "免费节点自动测活订阅池",
+      "first_seen": "2026-09-27",
+      "last_seen": "2026-11-01",
+      "risk_hints": [
+        "⚠低星(信任低,可能SEO垃圾仓库)"
+      ]
+    },
+    {
+      "full_name": "yy1588133/proxy-pool",
+      "html_url": "https://github.com/yy1588133/proxy-pool",
+      "url": "https://testingcf.jsdelivr.net/gh/yy1588133/proxy-pool@main/v2ray.txt",
+      "format": "base64",
+      "nodes": 821,
+      "stars": 44,
+      "repo_pushed_at": "2026-11-01",
+      "description": "自动聚合免费节点订阅（Clash/v2rayN），每6小时更新",
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-11-01",
+      "risk_hints": []
+    },
+    {
+      "full_name": "zueston/proxy-hub",
+      "html_url": "https://github.com/zueston/proxy-hub",
+      "url": "https://testingcf.jsdelivr.net/gh/zueston/proxy-hub@main/out/base64.txt",
+      "format": "base64",
+      "nodes": 719,
+      "stars": 0,
+      "repo_pushed_at": "2026-11-01",
+      "description": "Auto-tested free Clash / V2Ray subscription pool (hourly refresh)",
+      "first_seen": "2026-11-01",
+      "last_seen": "2026-11-01",
+      "risk_hints": [
+        "⚠低星(信任低,可能SEO垃圾仓库)"
+      ]
+    },
+    {
+      "full_name": "VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy",
+      "html_url": "https://github.com/VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy",
+      "url": "https://testingcf.jsdelivr.net/gh/VPN-Subcription-Links/ClashX-V2Ray-TopFreeProxy@main/combine/v2ray.config.txt",
+      "format": "base64",
+      "nodes": 707,
+      "stars": 5690,
+      "repo_pushed_at": "2026-11-01",
+      "description": "Top free VPN (ClashX & V2Ray proxy) with subscription links. [免费VPN、免费梯子、免费科学上网、免费订阅链接、免费节点、精选、ClashX & V2Ray 教程]",
+      "first_seen": "2026-10-11",
+      "last_seen": "2026-11-01",
+      "risk_hints": []
+    },
+    {
       "full_name": "cheshi888/freesub-v2",
       "html_url": "https://github.com/cheshi888/freesub-v2",
       "url": "https://testingcf.jsdelivr.net/gh/cheshi888/freesub-v2@main/output/v2ray.txt",
       "format": "base64",
-      "nodes": 754,
-      "stars": 4,
-      "repo_pushed_at": "2026-10-18",
+      "nodes": 687,
+      "stars": 5,
+      "repo_pushed_at": "2026-11-01",
       "description": "免费节点自动测活订阅池 (含真实家宽/住宅IP甄选) — 订阅源 14→57, 家宽判定七重信号",
       "first_seen": "2026-10-04",
-      "last_seen": "2026-10-18",
+      "last_seen": "2026-11-01",
       "risk_hints": [
         "⚠低星(信任低,可能SEO垃圾仓库)"
       ]
@@ -423,29 +426,61 @@
       "risk_hints": []
     },
     {
-      "full_name": "F0rc3Run/F0rc3Run",
-      "html_url": "https://github.com/F0rc3Run/F0rc3Run",
-      "url": "https://testingcf.jsdelivr.net/gh/F0rc3Run/F0rc3Run@main/Best-Results/sub.txt",
+      "full_name": "lorenzazy7kenyon/free-vpn-subscriptions",
+      "html_url": "https://github.com/lorenzazy7kenyon/free-vpn-subscriptions",
+      "url": "https://testingcf.jsdelivr.net/gh/lorenzazy7kenyon/free-vpn-subscriptions@main/output/v2ray-base64.txt",
       "format": "base64",
-      "nodes": 578,
-      "stars": 310,
-      "repo_pushed_at": "2026-10-11",
-      "description": "Free VPNs with VMess, VLESS, Shadowsocks & SSTP — powered by V2rayCollector. Bypass censorship, protect your privacy, and enjoy fast, secure, and unrestricted internet access.",
-      "first_seen": "2026-07-12",
-      "last_seen": "2026-10-11",
-      "risk_hints": []
+      "nodes": 656,
+      "stars": 0,
+      "repo_pushed_at": "2026-11-01",
+      "description": "?????????? VPN-???????? - ?????????? ?????? ???, ??????? ?????????. Clash / sing-box / v2ray",
+      "first_seen": "2026-10-18",
+      "last_seen": "2026-11-01",
+      "risk_hints": [
+        "⚠低星(信任低,可能SEO垃圾仓库)"
+      ]
     },
     {
       "full_name": "lucas8864/freesub",
       "html_url": "https://github.com/lucas8864/freesub",
       "url": "https://testingcf.jsdelivr.net/gh/lucas8864/freesub@main/output/v2ray.txt",
       "format": "base64",
-      "nodes": 537,
-      "stars": 2,
-      "repo_pushed_at": "2026-10-25",
+      "nodes": 522,
+      "stars": 3,
+      "repo_pushed_at": "2026-11-01",
       "description": "免费节点自动测活订阅池 (含真实家宽/住宅IP甄选)",
       "first_seen": "2026-09-20",
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-11-01",
+      "risk_hints": [
+        "⚠低星(信任低,可能SEO垃圾仓库)"
+      ]
+    },
+    {
+      "full_name": "alireza786786/Free-V2ray-Configs",
+      "html_url": "https://github.com/alireza786786/Free-V2ray-Configs",
+      "url": "https://testingcf.jsdelivr.net/gh/alireza786786/Free-V2ray-Configs@main/servers/vless_servers.txt",
+      "format": "plain",
+      "nodes": 511,
+      "stars": 2,
+      "repo_pushed_at": "2026-11-01",
+      "description": "V2Ray, VLESS, VMess, Trojan, Hysteria2, SSR, SOCKS5, Telegram MTProto Proxy, Clash, V2RayNG, NekoBox 🚀 30-Min Auto Updates | Explore the Repo Now! ✈️ @Goodbaye_filtering 🔥 آپدیت خودکار هر ۳۰ دقیقه | مخزن را همین الان ببینید! ✈️ @Goodbaye_filtering",
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-11-01",
+      "risk_hints": [
+        "⚠低星(信任低,可能SEO垃圾仓库)"
+      ]
+    },
+    {
+      "full_name": "meroseem/acaesub",
+      "html_url": "https://github.com/meroseem/acaesub",
+      "url": "https://testingcf.jsdelivr.net/gh/meroseem/acaesub@main/output/v2ray.txt",
+      "format": "base64",
+      "nodes": 493,
+      "stars": 6,
+      "repo_pushed_at": "2026-11-01",
+      "description": "免费节点自动测活家庭宽带IP订阅池。",
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-11-01",
       "risk_hints": [
         "⚠低星(信任低,可能SEO垃圾仓库)"
       ]
@@ -466,34 +501,6 @@
       ]
     },
     {
-      "full_name": "meroseem/acaesub",
-      "html_url": "https://github.com/meroseem/acaesub",
-      "url": "https://testingcf.jsdelivr.net/gh/meroseem/acaesub@main/output/v2ray.txt",
-      "format": "base64",
-      "nodes": 446,
-      "stars": 5,
-      "repo_pushed_at": "2026-10-25",
-      "description": "免费节点自动测活家庭宽带IP订阅池。",
-      "first_seen": "2026-09-20",
-      "last_seen": "2026-10-25",
-      "risk_hints": [
-        "⚠低星(信任低,可能SEO垃圾仓库)"
-      ]
-    },
-    {
-      "full_name": "ProblemTheCode/SylphNet-public",
-      "html_url": "https://github.com/ProblemTheCode/SylphNet-public",
-      "url": "https://testingcf.jsdelivr.net/gh/ProblemTheCode/SylphNet-public@main/sub/sub.txt",
-      "format": "base64",
-      "nodes": 403,
-      "stars": 13,
-      "repo_pushed_at": "2026-10-25",
-      "description": "⚡ SylphNet — Free V2Ray/VLESS/VMess/Trojan subscription, 350+ configs, auto-updated every 15 minutes | @SylphNet",
-      "first_seen": "2026-09-20",
-      "last_seen": "2026-10-25",
-      "risk_hints": []
-    },
-    {
       "full_name": "sakazxc1400-creator/free-vpn-sub",
       "html_url": "https://github.com/sakazxc1400-creator/free-vpn-sub",
       "url": "https://testingcf.jsdelivr.net/gh/sakazxc1400-creator/free-vpn-sub@main/output/sub-full.txt",
@@ -507,6 +514,32 @@
       "risk_hints": [
         "⚠低星(信任低,可能SEO垃圾仓库)"
       ]
+    },
+    {
+      "full_name": "ProblemTheCode/SylphNet-public",
+      "html_url": "https://github.com/ProblemTheCode/SylphNet-public",
+      "url": "https://testingcf.jsdelivr.net/gh/ProblemTheCode/SylphNet-public@main/sub/sub.txt",
+      "format": "base64",
+      "nodes": 276,
+      "stars": 14,
+      "repo_pushed_at": "2026-11-01",
+      "description": "⚡ SylphNet — Free V2Ray/VLESS/VMess/Trojan subscription, 350+ configs, auto-updated every 15 minutes | @SylphNet",
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-11-01",
+      "risk_hints": []
+    },
+    {
+      "full_name": "OgdenThomas/freesub",
+      "html_url": "https://github.com/OgdenThomas/freesub",
+      "url": "https://testingcf.jsdelivr.net/gh/OgdenThomas/freesub@main/output/v2ray.txt",
+      "format": "base64",
+      "nodes": 260,
+      "stars": 21,
+      "repo_pushed_at": "2026-11-01",
+      "description": "🚀 免费节点自动测活订阅池 (含真实家宽/住宅IP甄选) | 支持 Clash / v2rayN / sing-box 全协议",
+      "first_seen": "2026-09-20",
+      "last_seen": "2026-11-01",
+      "risk_hints": []
     },
     {
       "full_name": "ISWINE/proxypool-alive",
@@ -524,16 +557,16 @@
       ]
     },
     {
-      "full_name": "OgdenThomas/freesub",
-      "html_url": "https://github.com/OgdenThomas/freesub",
-      "url": "https://testingcf.jsdelivr.net/gh/OgdenThomas/freesub@main/output/v2ray.txt",
+      "full_name": "F0rc3Run/F0rc3Run",
+      "html_url": "https://github.com/F0rc3Run/F0rc3Run",
+      "url": "https://testingcf.jsdelivr.net/gh/F0rc3Run/F0rc3Run@main/Best-Results/sub.txt",
       "format": "base64",
-      "nodes": 209,
-      "stars": 15,
-      "repo_pushed_at": "2026-10-25",
-      "description": "🚀 免费节点自动测活订阅池 (含真实家宽/住宅IP甄选) | 支持 Clash / v2rayN / sing-box 全协议",
-      "first_seen": "2026-09-20",
-      "last_seen": "2026-10-25",
+      "nodes": 215,
+      "stars": 321,
+      "repo_pushed_at": "2026-11-01",
+      "description": "Free VPNs with VMess, VLESS, Shadowsocks & SSTP — powered by V2rayCollector. Bypass censorship, protect your privacy, and enjoy fast, secure, and unrestricted internet access.",
+      "first_seen": "2026-07-12",
+      "last_seen": "2026-11-01",
       "risk_hints": []
     },
     {
@@ -570,11 +603,11 @@
       "url": "https://testingcf.jsdelivr.net/gh/tglaoshiji/nodeshare@main/2025/7/v2ray.txt",
       "format": "base64",
       "nodes": 169,
-      "stars": 192,
-      "repo_pushed_at": "2026-09-27",
+      "stars": 198,
+      "repo_pushed_at": "2026-11-01",
       "description": "clash,v2ray, 免费节点订阅每日更新",
       "first_seen": "2026-09-20",
-      "last_seen": "2026-09-27",
+      "last_seen": "2026-11-01",
       "risk_hints": []
     },
     {
@@ -667,11 +700,11 @@
       "url": "https://testingcf.jsdelivr.net/gh/oversizexl/FreeSubsCheck@main/base64.txt",
       "format": "base64",
       "nodes": 71,
-      "stars": 7,
-      "repo_pushed_at": "2026-10-25",
+      "stars": 8,
+      "repo_pushed_at": "2026-11-01",
       "description": "免费节点、免费订阅 FreeSubs FreeNodes 利用 subs-check 自动从节点池爬取分享，支持 v2ray clash 等各种代理软件，部分需自行转换。",
       "first_seen": "2026-09-06",
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-11-01",
       "risk_hints": [
         "⚠低星(信任低,可能SEO垃圾仓库)"
       ]
@@ -681,12 +714,12 @@
       "html_url": "https://github.com/TelegaVPN/free-vpn-keys",
       "url": "https://testingcf.jsdelivr.net/gh/TelegaVPN/free-vpn-keys@main/sub/base64/vless.txt",
       "format": "base64",
-      "nodes": 67,
-      "stars": 5,
-      "repo_pushed_at": "2026-10-25",
+      "nodes": 61,
+      "stars": 8,
+      "repo_pushed_at": "2026-11-01",
       "description": "Open Xray-core & sing-box telemetry dataset, split-tunneling rulesets, CLI security auditor, and auto-verified VLESS Reality / Hysteria2 / Clash Meta feeds.",
       "first_seen": "2026-10-18",
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-11-01",
       "risk_hints": [
         "⚠低星(信任低,可能SEO垃圾仓库)"
       ]
@@ -696,12 +729,12 @@
       "html_url": "https://github.com/snakem982/proxypool",
       "url": "https://testingcf.jsdelivr.net/gh/snakem982/proxypool@main/source/v2ray-2.txt",
       "format": "base64",
-      "nodes": 57,
-      "stars": 2211,
-      "repo_pushed_at": "2026-10-25",
+      "nodes": 60,
+      "stars": 2235,
+      "repo_pushed_at": "2026-11-01",
       "description": "Free Proxies，Free Nodes，免费节点，白嫖节点，免费vpn，免费v2ray，免费订阅，免费clash，Free VPN，Free v2ray，Free Sub，Free Clash",
       "first_seen": "2026-06-13",
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-11-01",
       "risk_hints": []
     },
     {
@@ -746,6 +779,21 @@
       "risk_hints": []
     },
     {
+      "full_name": "shifeiquan520/shifeiquan3",
+      "html_url": "https://github.com/shifeiquan520/shifeiquan3",
+      "url": "https://testingcf.jsdelivr.net/gh/shifeiquan520/shifeiquan3@main/output/base64.txt",
+      "format": "base64",
+      "nodes": 35,
+      "stars": 0,
+      "repo_pushed_at": "2026-11-01",
+      "description": "free clash/v2ray nodes subscription, auto tested every 3 hours",
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-11-01",
+      "risk_hints": [
+        "⚠低星(信任低,可能SEO垃圾仓库)"
+      ]
+    },
+    {
       "full_name": "v2raynnodes/clashfree",
       "html_url": "https://github.com/v2raynnodes/clashfree",
       "url": "https://testingcf.jsdelivr.net/gh/v2raynnodes/clashfree@main/nodes/nodefree.txt",
@@ -757,21 +805,6 @@
       "first_seen": "2026-06-13",
       "last_seen": "2026-10-25",
       "risk_hints": []
-    },
-    {
-      "full_name": "shifeiquan520/shifeiquan3",
-      "html_url": "https://github.com/shifeiquan520/shifeiquan3",
-      "url": "https://testingcf.jsdelivr.net/gh/shifeiquan520/shifeiquan3@main/output/base64.txt",
-      "format": "base64",
-      "nodes": 29,
-      "stars": 0,
-      "repo_pushed_at": "2026-10-25",
-      "description": "free clash/v2ray nodes subscription, auto tested every 3 hours",
-      "first_seen": "2026-10-25",
-      "last_seen": "2026-10-25",
-      "risk_hints": [
-        "⚠低星(信任低,可能SEO垃圾仓库)"
-      ]
     },
     {
       "full_name": "xyfqzy/free-nodes",
@@ -815,16 +848,16 @@
       ]
     },
     {
-      "full_name": "kanaltvyt-dev/FreeForYoung",
-      "html_url": "https://github.com/kanaltvyt-dev/FreeForYoung",
-      "url": "https://testingcf.jsdelivr.net/gh/kanaltvyt-dev/FreeForYoung@main/output/subscription.txt",
-      "format": "plain",
+      "full_name": "Andrejewild/happ-v2rayng-configs",
+      "html_url": "https://github.com/Andrejewild/happ-v2rayng-configs",
+      "url": "https://testingcf.jsdelivr.net/gh/Andrejewild/happ-v2rayng-configs@main/base64.txt",
+      "format": "base64",
       "nodes": 20,
-      "stars": 0,
-      "repo_pushed_at": "2026-10-25",
-      "description": "Free public VPN subscription for Happ",
-      "first_seen": "2026-08-16",
-      "last_seen": "2026-10-25",
+      "stars": 2,
+      "repo_pushed_at": "2026-11-01",
+      "description": "🚀 mega vpn: auto-updated v2rayng, happ, hiddify, sing-box free subscription | мега впн в telegram: @vpnsmegabot",
+      "first_seen": "2026-10-25",
+      "last_seen": "2026-11-01",
       "risk_hints": [
         "⚠低星(信任低,可能SEO垃圾仓库)"
       ]
@@ -836,24 +869,24 @@
       "format": "base64",
       "nodes": 20,
       "stars": 2,
-      "repo_pushed_at": "2026-10-25",
+      "repo_pushed_at": "2026-11-01",
       "description": "💻 mega vpn: free hiddify next, sing-box & nekobox subscription for pc / android / ios | бесплатный мега впн @vpnsmegabot",
       "first_seen": "2026-10-25",
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-11-01",
       "risk_hints": [
         "⚠低星(信任低,可能SEO垃圾仓库)"
       ]
     },
     {
-      "full_name": "Andrejewild/happ-v2rayng-configs",
-      "html_url": "https://github.com/Andrejewild/happ-v2rayng-configs",
-      "url": "https://testingcf.jsdelivr.net/gh/Andrejewild/happ-v2rayng-configs@main/base64.txt",
-      "format": "base64",
+      "full_name": "kanaltvyt-dev/FreeForYoung",
+      "html_url": "https://github.com/kanaltvyt-dev/FreeForYoung",
+      "url": "https://testingcf.jsdelivr.net/gh/kanaltvyt-dev/FreeForYoung@main/output/subscription.txt",
+      "format": "plain",
       "nodes": 20,
-      "stars": 2,
+      "stars": 0,
       "repo_pushed_at": "2026-10-25",
-      "description": "🚀 mega vpn: auto-updated v2rayng, happ, hiddify, sing-box free subscription | мега впн в telegram: @vpnsmegabot",
-      "first_seen": "2026-10-25",
+      "description": "Free public VPN subscription for Happ",
+      "first_seen": "2026-08-16",
       "last_seen": "2026-10-25",
       "risk_hints": [
         "⚠低星(信任低,可能SEO垃圾仓库)"
@@ -870,6 +903,21 @@
       "description": "免费节点订阅自动抓取 - 每日更新 Clash/V2Ray 节点",
       "first_seen": "2026-10-18",
       "last_seen": "2026-10-25",
+      "risk_hints": [
+        "⚠clash(防多配置拼接解析崩,优先找该仓库的 base64/txt 版)"
+      ]
+    },
+    {
+      "full_name": "share-daily/node",
+      "html_url": "https://github.com/share-daily/node",
+      "url": "https://testingcf.jsdelivr.net/gh/share-daily/node@main/clash.yaml",
+      "format": "clash",
+      "nodes": 312,
+      "stars": 16,
+      "repo_pushed_at": "2026-11-01",
+      "description": "免费节点每日更新｜Clash / V2Ray / VLESS / VMess / Trojan / Hysteria2 免费代理节点｜发布前自动检测可用性｜Telegram 实时同步",
+      "first_seen": "2026-08-23",
+      "last_seen": "2026-11-01",
       "risk_hints": [
         "⚠clash(防多配置拼接解析崩,优先找该仓库的 base64/txt 版)"
       ]
@@ -911,12 +959,12 @@
       "html_url": "https://github.com/SnapdragonLee/SystemProxy",
       "url": "https://testingcf.jsdelivr.net/gh/SnapdragonLee/SystemProxy@master/dist/clash_config_extra.yaml",
       "format": "clash",
-      "nodes": 239,
-      "stars": 137,
-      "repo_pushed_at": "2026-10-18",
+      "nodes": 197,
+      "stars": 138,
+      "repo_pushed_at": "2026-11-01",
       "description": "Free Clash subscription",
       "first_seen": "2026-06-13",
-      "last_seen": "2026-10-18",
+      "last_seen": "2026-11-01",
       "risk_hints": [
         "⚠clash(防多配置拼接解析崩,优先找该仓库的 base64/txt 版)"
       ]
@@ -942,30 +990,15 @@
       "html_url": "https://github.com/UIRAN23/free-vpn-subscriptions",
       "url": "https://testingcf.jsdelivr.net/gh/UIRAN23/free-vpn-subscriptions@main/sub/mihomo-all.yaml",
       "format": "clash",
-      "nodes": 181,
+      "nodes": 151,
       "stars": 4,
-      "repo_pushed_at": "2026-10-25",
+      "repo_pushed_at": "2026-11-01",
       "description": "",
       "first_seen": "2026-07-12",
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-11-01",
       "risk_hints": [
         "⚠clash(防多配置拼接解析崩,优先找该仓库的 base64/txt 版)",
         "⚠低星(信任低,可能SEO垃圾仓库)"
-      ]
-    },
-    {
-      "full_name": "share-daily/node",
-      "html_url": "https://github.com/share-daily/node",
-      "url": "https://testingcf.jsdelivr.net/gh/share-daily/node@main/clash.yaml",
-      "format": "clash",
-      "nodes": 152,
-      "stars": 14,
-      "repo_pushed_at": "2026-10-25",
-      "description": "免费节点每日更新｜Clash / V2Ray / VLESS / VMess / Trojan / Hysteria2 免费代理节点｜发布前自动检测可用性｜Telegram 实时同步",
-      "first_seen": "2026-08-23",
-      "last_seen": "2026-10-25",
-      "risk_hints": [
-        "⚠clash(防多配置拼接解析崩,优先找该仓库的 base64/txt 版)"
       ]
     },
     {
@@ -1000,6 +1033,21 @@
       ]
     },
     {
+      "full_name": "chengaopan/AutoMergePublicNodes",
+      "html_url": "https://github.com/chengaopan/AutoMergePublicNodes",
+      "url": "https://testingcf.jsdelivr.net/gh/chengaopan/AutoMergePublicNodes@master/snippets/nodes.yml",
+      "format": "clash",
+      "nodes": 63,
+      "stars": 8309,
+      "repo_pushed_at": "2026-11-01",
+      "description": "自动抓取合并互联网上的公开节点。 🚀 免费节点,🚀免费节点订阅,🚀v2ray免费节点,ssr免费节点订阅,clash免费节点订阅,免费梯子,免费翻墙,免费科学上网,免费ss/v2ray/trojan/clash节点,谷歌商店,翻墙梯子",
+      "first_seen": "2026-10-18",
+      "last_seen": "2026-11-01",
+      "risk_hints": [
+        "⚠clash(防多配置拼接解析崩,优先找该仓库的 base64/txt 版)"
+      ]
+    },
+    {
       "full_name": "robram9572/free-proxy-airport",
       "html_url": "https://github.com/robram9572/free-proxy-airport",
       "url": "https://testingcf.jsdelivr.net/gh/robram9572/free-proxy-airport@main/docs/clash.yaml",
@@ -1020,27 +1068,27 @@
       "html_url": "https://github.com/sunmiao4458/free-proxy-airport",
       "url": "https://testingcf.jsdelivr.net/gh/sunmiao4458/free-proxy-airport@main/docs/clash.yaml",
       "format": "clash",
-      "nodes": 58,
-      "stars": 518,
-      "repo_pushed_at": "2026-10-25",
+      "nodes": 50,
+      "stars": 560,
+      "repo_pushed_at": "2026-11-01",
       "description": "Self-healing Clash free subscription generated by GitHub Actions.",
       "first_seen": "2026-07-05",
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-11-01",
       "risk_hints": [
         "⚠clash(防多配置拼接解析崩,优先找该仓库的 base64/txt 版)"
       ]
     },
     {
-      "full_name": "chengaopan/AutoMergePublicNodes",
-      "html_url": "https://github.com/chengaopan/AutoMergePublicNodes",
-      "url": "https://testingcf.jsdelivr.net/gh/chengaopan/AutoMergePublicNodes@master/snippets/nodes.yml",
+      "full_name": "awesome-vpn/awesome-vpn",
+      "html_url": "https://github.com/awesome-vpn/awesome-vpn",
+      "url": "https://testingcf.jsdelivr.net/gh/awesome-vpn/awesome-vpn@master/clash.yaml",
       "format": "clash",
-      "nodes": 42,
-      "stars": 8234,
-      "repo_pushed_at": "2026-10-18",
-      "description": "自动抓取合并互联网上的公开节点。 🚀 免费节点,🚀免费节点订阅,🚀v2ray免费节点,ssr免费节点订阅,clash免费节点订阅,免费梯子,免费翻墙,免费科学上网,免费ss/v2ray/trojan/clash节点,谷歌商店,翻墙梯子",
-      "first_seen": "2026-10-18",
-      "last_seen": "2026-10-18",
+      "nodes": 48,
+      "stars": 6834,
+      "repo_pushed_at": "2026-11-01",
+      "description": "Free proxy node aggregator. Daily updated vmess/vless/trojan/ss. 免费 代理节点 翻墙 梯子 科学上网 机场订阅 网络加速 VPN 免翻墙每日更新 一键导入",
+      "first_seen": "2026-06-13",
+      "last_seen": "2026-11-01",
       "risk_hints": [
         "⚠clash(防多配置拼接解析崩,优先找该仓库的 base64/txt 版)"
       ]
@@ -1083,26 +1131,11 @@
       "url": "https://testingcf.jsdelivr.net/gh/ovmvo/FreeSub@main/sub/permanent/mihomo.yaml",
       "format": "clash",
       "nodes": 37,
-      "stars": 344,
-      "repo_pushed_at": "2026-10-25",
+      "stars": 355,
+      "repo_pushed_at": "2026-11-01",
       "description": "vless,vmess,高可用节点、优选订阅、优选节点、高速节点、公益订阅、clash节点、免费clash节点、免费节点、免费梯子、clash科学上网、clash翻墙、clash订阅链接、clash for Windows、clash教程、免费公益节点、最新clash免费节点订阅地址、clash免费节点每日更新",
       "first_seen": "2026-06-21",
-      "last_seen": "2026-10-25",
-      "risk_hints": [
-        "⚠clash(防多配置拼接解析崩,优先找该仓库的 base64/txt 版)"
-      ]
-    },
-    {
-      "full_name": "awesome-vpn/awesome-vpn",
-      "html_url": "https://github.com/awesome-vpn/awesome-vpn",
-      "url": "https://testingcf.jsdelivr.net/gh/awesome-vpn/awesome-vpn@master/clash.yaml",
-      "format": "clash",
-      "nodes": 34,
-      "stars": 6554,
-      "repo_pushed_at": "2026-10-04",
-      "description": "Free proxy node aggregator. Daily updated vmess/vless/trojan/ss. 免费 代理节点 翻墙 梯子 科学上网 机场订阅 网络加速 VPN 免翻墙每日更新 一键导入",
-      "first_seen": "2026-06-13",
-      "last_seen": "2026-10-04",
+      "last_seen": "2026-11-01",
       "risk_hints": [
         "⚠clash(防多配置拼接解析崩,优先找该仓库的 base64/txt 版)"
       ]
@@ -1112,12 +1145,12 @@
       "html_url": "https://github.com/zhuhaiuk/free-nodes",
       "url": "https://testingcf.jsdelivr.net/gh/zhuhaiuk/free-nodes@main/clash_config.yaml",
       "format": "clash",
-      "nodes": 33,
-      "stars": 375,
-      "repo_pushed_at": "2026-10-25",
+      "nodes": 34,
+      "stars": 395,
+      "repo_pushed_at": "2026-11-01",
       "description": "每小时自动更新的免费节点订阅，支持 Clash、Mihomo、V2Ray、Trojan、Shadowrocket 等客户端测试使用。",
       "first_seen": "2026-07-12",
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-11-01",
       "risk_hints": [
         "⚠clash(防多配置拼接解析崩,优先找该仓库的 base64/txt 版)"
       ]
@@ -1128,11 +1161,11 @@
       "url": "https://testingcf.jsdelivr.net/gh/kooker/FreeSubsCheck@main/mihomo.yaml",
       "format": "clash",
       "nodes": 29,
-      "stars": 440,
-      "repo_pushed_at": "2026-10-25",
+      "stars": 449,
+      "repo_pushed_at": "2026-11-01",
       "description": "免费节点、免费订阅 FreeSubs FreeNodes 利用 subs-check 自动从节点池爬取分享，支持 v2ray clash 等各种代理软件，部分需自行转换。",
       "first_seen": "2026-06-13",
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-11-01",
       "risk_hints": [
         "⚠clash(防多配置拼接解析崩,优先找该仓库的 base64/txt 版)"
       ]
@@ -1181,82 +1214,68 @@
       "risk_hints": [
         "⚠clash(防多配置拼接解析崩,优先找该仓库的 base64/txt 版)"
       ]
+    },
+    {
+      "full_name": "yuluo688/clash-hot-countries",
+      "html_url": "https://github.com/yuluo688/clash-hot-countries",
+      "url": "https://testingcf.jsdelivr.net/gh/yuluo688/clash-hot-countries@master/clash-hot-countries.yaml",
+      "format": "clash",
+      "nodes": 22,
+      "stars": 0,
+      "repo_pushed_at": "2026-11-01",
+      "description": "Daily Clash subscription: free hot-country proxies",
+      "first_seen": "2026-11-01",
+      "last_seen": "2026-11-01",
+      "risk_hints": [
+        "⚠clash(防多配置拼接解析崩,优先找该仓库的 base64/txt 版)",
+        "⚠低星(信任低,可能SEO垃圾仓库)"
+      ]
     }
   ],
   "new_candidates": [
     {
-      "full_name": "alireza786786/Free-V2ray-Configs",
-      "html_url": "https://github.com/alireza786786/Free-V2ray-Configs",
-      "url": "https://testingcf.jsdelivr.net/gh/alireza786786/Free-V2ray-Configs@main/servers/vless.txt",
-      "format": "plain",
-      "nodes": 7028,
-      "stars": 2,
-      "repo_pushed_at": "2026-10-25",
-      "description": "🚀 آپدیت خودکار هر ۳۰ دقیقه از گیت‌هاب و تلگرام | جمع‌آوری کانفیگ‌های رایگان V2Ray, VLESS, VMess, Trojan, Hysteria2 با پینگ زیر ۵۰۰ms و الگوی اختصاصی Goodbaye 🔹 Automated free V2Ray collector from GitHub & Telegram",
-      "first_seen": "2026-10-25",
-      "last_seen": "2026-10-25",
-      "risk_hints": [
-        "⚠低星(信任低,可能SEO垃圾仓库)",
-        "⚠超大池(探测负载高,留意)"
-      ]
-    },
-    {
-      "full_name": "noahclanman/free-xray-gcp",
-      "html_url": "https://github.com/noahclanman/free-xray-gcp",
-      "url": "https://testingcf.jsdelivr.net/gh/noahclanman/free-xray-gcp@main/output/all/configs_base64.txt",
+      "full_name": "pctaha501-create/FreeVPN-Subscription-Mirror",
+      "html_url": "https://github.com/pctaha501-create/FreeVPN-Subscription-Mirror",
+      "url": "https://testingcf.jsdelivr.net/gh/pctaha501-create/FreeVPN-Subscription-Mirror@main/output/v2ray-base64.txt",
       "format": "base64",
-      "nodes": 958,
-      "stars": 1,
-      "repo_pushed_at": "2026-10-25",
-      "description": "Real-delay tested free Xray configs — VLESS, VMess, Trojan, Shadowsocks. Every config proxies a real HTTP request before it is published. GCP-first, Asia-first, rebuilt every 30 minutes by GitHub Actions.",
-      "first_seen": "2026-10-25",
-      "last_seen": "2026-10-25",
-      "risk_hints": [
-        "⚠低星(信任低,可能SEO垃圾仓库)"
-      ]
-    },
-    {
-      "full_name": "shifeiquan520/shifeiquan3",
-      "html_url": "https://github.com/shifeiquan520/shifeiquan3",
-      "url": "https://testingcf.jsdelivr.net/gh/shifeiquan520/shifeiquan3@main/output/base64.txt",
-      "format": "base64",
-      "nodes": 29,
+      "nodes": 1751,
       "stars": 0,
-      "repo_pushed_at": "2026-10-25",
-      "description": "free clash/v2ray nodes subscription, auto tested every 3 hours",
-      "first_seen": "2026-10-25",
-      "last_seen": "2026-10-25",
+      "repo_pushed_at": "2026-11-01",
+      "description": "Automatically refreshed mirror of public, externally tested V2Ray/VLESS subscription configs. Not a private VPN server.",
+      "first_seen": "2026-11-01",
+      "last_seen": "2026-11-01",
       "risk_hints": [
         "⚠低星(信任低,可能SEO垃圾仓库)"
       ]
     },
     {
-      "full_name": "Andrejewild/hiddify-singbox-configs-ru",
-      "html_url": "https://github.com/Andrejewild/hiddify-singbox-configs-ru",
-      "url": "https://testingcf.jsdelivr.net/gh/Andrejewild/hiddify-singbox-configs-ru@main/base64.txt",
+      "full_name": "zueston/proxy-hub",
+      "html_url": "https://github.com/zueston/proxy-hub",
+      "url": "https://testingcf.jsdelivr.net/gh/zueston/proxy-hub@main/out/base64.txt",
       "format": "base64",
-      "nodes": 20,
-      "stars": 2,
-      "repo_pushed_at": "2026-10-25",
-      "description": "💻 mega vpn: free hiddify next, sing-box & nekobox subscription for pc / android / ios | бесплатный мега впн @vpnsmegabot",
-      "first_seen": "2026-10-25",
-      "last_seen": "2026-10-25",
+      "nodes": 719,
+      "stars": 0,
+      "repo_pushed_at": "2026-11-01",
+      "description": "Auto-tested free Clash / V2Ray subscription pool (hourly refresh)",
+      "first_seen": "2026-11-01",
+      "last_seen": "2026-11-01",
       "risk_hints": [
         "⚠低星(信任低,可能SEO垃圾仓库)"
       ]
     },
     {
-      "full_name": "Andrejewild/happ-v2rayng-configs",
-      "html_url": "https://github.com/Andrejewild/happ-v2rayng-configs",
-      "url": "https://testingcf.jsdelivr.net/gh/Andrejewild/happ-v2rayng-configs@main/base64.txt",
-      "format": "base64",
-      "nodes": 20,
-      "stars": 2,
-      "repo_pushed_at": "2026-10-25",
-      "description": "🚀 mega vpn: auto-updated v2rayng, happ, hiddify, sing-box free subscription | мега впн в telegram: @vpnsmegabot",
-      "first_seen": "2026-10-25",
-      "last_seen": "2026-10-25",
+      "full_name": "yuluo688/clash-hot-countries",
+      "html_url": "https://github.com/yuluo688/clash-hot-countries",
+      "url": "https://testingcf.jsdelivr.net/gh/yuluo688/clash-hot-countries@master/clash-hot-countries.yaml",
+      "format": "clash",
+      "nodes": 22,
+      "stars": 0,
+      "repo_pushed_at": "2026-11-01",
+      "description": "Daily Clash subscription: free hot-country proxies",
+      "first_seen": "2026-11-01",
+      "last_seen": "2026-11-01",
       "risk_hints": [
+        "⚠clash(防多配置拼接解析崩,优先找该仓库的 base64/txt 版)",
         "⚠低星(信任低,可能SEO垃圾仓库)"
       ]
     }
@@ -1267,8 +1286,8 @@
       "html_url": "https://github.com/0xRadikal/Free-v2ray-Configs",
       "url": "https://testingcf.jsdelivr.net/gh/0xRadikal/Free-v2ray-Configs@main/light/configs_base64.txt",
       "format": "base64",
-      "stars": 766,
-      "repo_pushed_at": "2026-10-25",
+      "stars": 780,
+      "repo_pushed_at": "2026-11-01",
       "age_days": 0,
       "verdict": "近期有更新"
     },
@@ -1277,9 +1296,9 @@
       "html_url": "https://github.com/Au1rxx/free-vpn-subscriptions",
       "url": "https://testingcf.jsdelivr.net/gh/Au1rxx/free-vpn-subscriptions@main/output/v2ray-base64.txt",
       "format": "base64",
-      "stars": 1033,
-      "repo_pushed_at": "2026-10-25",
-      "age_days": 0,
+      "stars": 1075,
+      "repo_pushed_at": "2026-10-30",
+      "age_days": 2,
       "verdict": "近期有更新"
     },
     {
@@ -1287,8 +1306,8 @@
       "html_url": "https://github.com/V2RayRoot/V2RayConfig",
       "url": "https://testingcf.jsdelivr.net/gh/V2RayRoot/V2RayConfig@main/Config/vless.txt",
       "format": "plain",
-      "stars": 173,
-      "repo_pushed_at": "2026-10-25",
+      "stars": 175,
+      "repo_pushed_at": "2026-11-01",
       "age_days": 0,
       "verdict": "近期有更新"
     },
@@ -1297,8 +1316,8 @@
       "html_url": "https://github.com/igareck/vpn-configs-for-russia",
       "url": "https://testingcf.jsdelivr.net/gh/igareck/vpn-configs-for-russia@main/BLACK_VLESS_RUS_mobile.txt",
       "format": "plain",
-      "stars": 9317,
-      "repo_pushed_at": "2026-10-25",
+      "stars": 9404,
+      "repo_pushed_at": "2026-11-01",
       "age_days": 0,
       "verdict": "近期有更新"
     },
@@ -1307,8 +1326,8 @@
       "html_url": "https://github.com/roosterkid/openproxylist",
       "url": "https://testingcf.jsdelivr.net/gh/roosterkid/openproxylist@main/V2RAY_BASE64.txt",
       "format": "base64",
-      "stars": 937,
-      "repo_pushed_at": "2026-10-25",
+      "stars": 942,
+      "repo_pushed_at": "2026-11-01",
       "age_days": 0,
       "verdict": "近期有更新"
     },
@@ -1317,8 +1336,8 @@
       "html_url": "https://github.com/shaoyouvip/free",
       "url": "https://testingcf.jsdelivr.net/gh/shaoyouvip/free@main/mihomo.yaml",
       "format": "clash",
-      "stars": 1288,
-      "repo_pushed_at": "2026-10-25",
+      "stars": 1312,
+      "repo_pushed_at": "2026-11-01",
       "age_days": 0,
       "verdict": "近期有更新"
     },
@@ -1327,8 +1346,8 @@
       "html_url": "https://github.com/ssrsub/ssr",
       "url": "https://testingcf.jsdelivr.net/gh/ssrsub/ssr@master/clash.yaml",
       "format": "clash",
-      "stars": 658,
-      "repo_pushed_at": "2026-10-25",
+      "stars": 659,
+      "repo_pushed_at": "2026-11-01",
       "age_days": 0,
       "verdict": "近期有更新"
     }
