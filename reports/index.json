@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-11-08",
+    "generated_at": "2026-11-08T19:01:38.918503+08:00",
+    "markdown": "reports/2026-11-08.md",
+    "json": "reports/2026-11-08.json"
+  },
+  {
     "date": "2026-11-01",
     "generated_at": "2026-11-01T19:00:51.115457+08:00",
     "markdown": "reports/2026-11-01.md",
